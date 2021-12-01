@@ -29,14 +29,16 @@ All data stored in a relational database is of a certain data type. Some of the 
 
 To retrieve an entire table, use the `SELECT` command:
 ```sql
-SELECT * FROM celebs;
+SELECT *
+FROM celebs;
 ```
 
 The asterisk (`*`) is the wildcard character that returns all columns of a table without restriction.
 
 To retrieve all of one column from a database, change the asterisk (`*`) to the column being retrieved:
 ```sql
-SELECT name FROM celebs; # all names will be returned
+SELECT name
+FROM celebs; # all names will be returned
 ```
 
 ## Creating Table
