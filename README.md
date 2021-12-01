@@ -22,5 +22,5 @@ Below is a hierarchial list of the subjects covered:
 	* Java (*not started*)
 	* Javascript (*not started*)
 	* Python (*in progress*)
-	* SQL (*not started*)
+	* SQL (*in progress*)
 	* Swift (*not started*)
