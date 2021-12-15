@@ -115,7 +115,9 @@ sets so that you can perform aggregate calculations on each group.
 ## Creating Groups
 Groups are created using the `GROUP BY` clause in your `SELECT` statement.
 ```sql
-SELECT vend_id, COUNT(*) AS num_prods FROM products GROUP BY vend_id;
+SELECT vend_id, COUNT(*) AS num_prods 
+FROM products 
+GROUP BY vend_id;
 ```
 Output:
 ```blank
