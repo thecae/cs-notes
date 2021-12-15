@@ -16,6 +16,7 @@ Below is a hierarchial list of the subjects covered:
 * Neural Networks (*not started*)
 * Operating Systems (*not started*)
 * Programming Languages
+	* C# (*not started*)
 	* C++ (*in progress*)
 	* CSS (*not started*)
 	* HTML (*not started*)
