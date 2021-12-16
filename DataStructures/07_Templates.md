@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: TEMPLATES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Templates
 Functions can be built with different data types to accomplish similar goals.  This overloading of data type makes multiple long functions with very repetitive code.
 ```c++

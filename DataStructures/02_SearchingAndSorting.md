@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: SEARCHING AND SORTING
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Searching and Sorting
 *Linear Searching* is the process of starting from the beginning, searching every element in the container until the desired item is found.
 ```c++

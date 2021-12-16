@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: INTRO TO DATA STRUCTURES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: An Introduction to Data Structures
 A *data structure* is a way of organizing, storing, and performing operations on data. There are many types of data structures, a few of which are defined below.
 - *Record*: A data structure that stores subitems with an associated name

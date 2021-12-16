@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: TREES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Trees
 A *binary tree* is a tree where each node has up to two children.  If a binary tree has one child, it must be the left child.
 - *Leaf*: A tree with no children

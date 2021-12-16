@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: BALANCED TREES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Balanced Trees
 Balanced Trees, otherwise known as *AVL Trees*, are binary search trees with a height balance property and contain specific operations to rebalance the tree when nodes are inserted or removed.
 

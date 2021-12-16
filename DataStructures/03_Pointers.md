@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: POINTERS
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Pointers
 A *pointer* is a variable that contains a memory address.
 

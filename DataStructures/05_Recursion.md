@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: RECURSION
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Recursion
 An *algorithm* is a sequence of steps that are followed for solving a problem.
 

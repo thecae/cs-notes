@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: CONTAINERS
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Containers
 A *range-based for loop* is a very powerful tool for iterating through each element in a container regardless of what container it is.  It's so powerful that you don't even need its data type.
 

@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: STACKS AND QUEUES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Stacks and Queues
 Stacks and Queues are really important data types for storing ordered values for use later.  These will be used primarily later for searching algorithms.
 

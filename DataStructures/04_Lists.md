@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: LISTS
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Lists
 A *list* is a common ADT for holding ordered items.
 

@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: HASH TABLES
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Hash Tables
 A *hash table* is a data structure that stores unordered items by mapping each item to an array location.  Hash tables are advantageous because it reduces the time complexity for search, insert, and remove from O(n) to O(1).
 - *Key*: The value used to map to an index

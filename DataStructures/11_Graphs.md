@@ -1,3 +1,11 @@
+<!---
+CS NOTES :: DATA STRUCTURES :: GRAPHS
+
+BY: COLE ELLIS
+
+LAST MODIFIED: 16 DEC 2021
+-->
+
 # ***Data Structures***: Graphs
 A *graph* is an ADT that represents connections among items.  Graphs have two components:
 - *Vertex*: An item in the graph
