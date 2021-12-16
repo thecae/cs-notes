@@ -163,9 +163,9 @@ BSTRemove(tree, key) {
             suc = cur->right;
             while (suc->left != nullptr)
                suc = suc->left;
-            successorData = Create copy of suc's data;
+            successorData = Create copy of suc data;
             BSTRemove(tree, suc->key);     // Remove successor
-            Assign cur's data with successorData
+            Assign cur data with successorData
          }
          return; // Node found and removed
       }
@@ -271,7 +271,7 @@ BSTRemoveNode(tree, parent, node) {
         
    // Case 1: Internal node with 2 children
    if (node->left != null && node->right != null) {
-      // Find successor and successor's parent
+      // Find successor and successor parent
       succNode = node->right;
       successorParent = node;
       while (succNode->left != null) {
@@ -298,7 +298,7 @@ BSTRemoveNode(tree, parent, node) {
 
    // Case 3: Internal with left child only
    else if (node->left != null) {
-      // Replace node with node's left child
+      // Replace node with node left child
       if (parent->left == node) {
          parent->left = node->left;
 	  }
@@ -309,7 +309,7 @@ BSTRemoveNode(tree, parent, node) {
 
    // Case 4: Internal with right child only OR leaf
    else {
-      // Replace node with node's right child
+      // Replace node with node right child
       if (parent->left == node) {
          parent->left = node->right;
 	  }
