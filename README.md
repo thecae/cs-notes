@@ -10,7 +10,7 @@ Below is a hierarchial list of the subjects covered:
 * Algorithms (*in progress*)
 * Artifical Intelligence (*not started*)
 * Computer Architecture (*in progress*)
-* Data Structures (*in progress*)
+* Data Structures
 * Machine Learning (*not started*)
 * Networking (*not started*)
 * Neural Networks (*not started*)
