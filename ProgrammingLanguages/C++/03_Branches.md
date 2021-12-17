@@ -3,7 +3,7 @@ CS NOTES :: C++ :: BRANCHES
 
 BY: COLE ELLIS
 
-LAST MODIFIED: 16 DEC 2021
+LAST MODIFIED: 17 DEC 2021
 -->
 
 # ***C++***: Branches
