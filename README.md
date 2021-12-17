@@ -17,7 +17,7 @@ Below is a hierarchial list of the subjects covered:
 * Operating Systems (*not started*)
 * Programming Languages
 	* C# (*not started*)
-	* C++ (*in progress*)
+	* C++
 	* CSS (*not started*)
 	* HTML (*not started*)
 	* Java (*not started*)
