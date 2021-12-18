@@ -26,35 +26,35 @@ The list of logical operators are stated below with their truth tables:
 
 | `p` | `q` | `p ∧ q` |
 |-----|-----|----------|
-| T | T | T |
-| T | F | F |
-| F | T | F |
-| F | F | F | 
+| T | T | **T** |
+| T | F | **F** |
+| F | T | **F** |
+| F | F | **F** | 
 
 - *Disjunction* (`∨`): OR
 
 | `p` | `q` | `p ∨ q` |
 |-----|-----|----------|
-| T | T | T |
-| T | F | T |
-| F | T | T |
-| F | F | F | 
+| T | T | **T** |
+| T | F | **T** |
+| F | T | **T** |
+| F | F | **F** | 
 
 - *Exclusive Or* (`XOR`): Either (`p` and `q` are different)
 
 | `p` | `q` | `p XOR q` |
 |-----|-----|-----------|
-| T | T | F |
-| T | F | T |
-| F | T | T |
-| F | F | F | 
+| T | T | **F** |
+| T | F | **T** |
+| F | T | **T** |
+| F | F | **F** | 
 
 - *Negation* (`~`): NOT
 
 | `p` | `~p` |
 |-----|------|
-| T | F |
-| F | T |
+| T | **F** |
+| F | **T** |
 
 A *truth table* shows the truth value of a compound proposition for every possible combination of True and False.  Truth tables are guaranteed to have `2^n` rows, where `n` is the number of parameters.  Here is how to establish a truth table:
 - Alternate the rightmost column between True and False
@@ -67,10 +67,10 @@ A compound proposition using a conditional operation is a *conditional propositi
 
 | `p` | `q` | `p -> q` |
 |-----|-----|----------|
-| T | T | T |
-| T | F | F |
-| F | T | T |
-| F | F | T |
+| T | T | **T** |
+| T | F | **F** |
+| F | T | **T** |
+| F | F | **T** |
 
 ***Note**: To explain why this truth table works, consider a conditional statement as a promise.  If a promise is made (`p = T`) and the follow-through is not made (`q = F`), the promise is broken and is marked as false.  If the promise was never made (`p = F`), the outcome doesn't matter and no promise is broken, and we mark that as true.*
 
@@ -97,16 +97,16 @@ A *biconditional statement* is only true when the conditional statement and the 
 A *tautology* is a compound proposition that always evaluates to `true`, regardless of the truth value of the individual propositions.
 
 | `p` | `~p` | `p ∨ ~p` |
-|-----|------|-----------|
-| T | F | T |
-| F | T | T |
+|-----|------|----------|
+| T | F | **T** |
+| F | T | **T** |
 
 A *contradition* is a compound proposition that always evaluates to `false`, regardless of the truth value of the individual propositions.
 
 | `p` | `~p` | `p ∧ ~p` |
-|-----|------|-----------|
-| T | F | F |
-| F | T | F |
+|-----|------|----------|
+| T | F | **F** |
+| F | T | **F** |
 
 Two statements are *logically equivalent* if they have the same truth value regardless of their indiviual propositions.  The denotation for equivalent propositions is `s ≡ r`.
 
@@ -165,7 +165,7 @@ De Morgan's Laws for nested quantifiers:
 
 Here are some examples of using nested quantifiers:
 - Everyone else: `∀x ∀y ((x ≠ y) -> P(x,y))`
-- Exactly one: `∃x (P(x) ∧ ∀ y (y ≠ x) -> ~P(y)))`
+- Exactly one: `∃x (P(x) ∧ ∀y (y ≠ x) -> ~P(y)))`
 
 ## Logical Reasoning
 An *argument* is a sequence of propositions, called *hypotheses*, followed by a final proposition, called a *conclusion*.
@@ -238,7 +238,7 @@ p ∨ q
 - Resolution
 ```blank
 p ∨ q
-~p or r
+~p ∨ r
 -------
 ∴ q ∨ r
 ```
@@ -272,27 +272,4 @@ c is an element
 P(c)
 ---------------
 ∴ ∃x P(x)
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
 ```
