@@ -12,7 +12,7 @@ The *parity* of a number is whether the number is odd or even.  We define odd an
 - *Even number*: Follows `x = 2k`, `k ∈ ℤ`
 - *Odd number*: Follows `x = 2k + 1`, `k ∈ ℤ`
 
-A *rational number* indicates that there exists some `x` and `y`, where `y \neq 0`, such that `r = x/y`.  
+A *rational number* indicates that there exists some `x` and `y`, where `y ≠ 0`, such that `r = x/y`.  
 
 An integer `y` *divides* `x` if and only iff `y % x = 0`.  The notation for this is `x|y`.
 
