@@ -61,11 +61,11 @@ A *truth table* shows the truth value of a compound proposition for every possib
 - For every sequential column, alternate between twice as many True and False (i.e. second column alternates True, True, False, False,....)
 
 ## Conditional Statements
-The *conditional operation* denotes implication.  The symbol for the conditional operator is `->`.  The proposition `p -> q` is read as "If `p`, then `q`".
+The *conditional operation* denotes implication.  The symbol for the conditional operator is `→`.  The proposition `p → q` is read as "If `p`, then `q`".
 
 A compound proposition using a conditional operation is a *conditional proposition* or *conditional statement*.  The proposition `p` is called the *hypothesis* and the proposition `q` is the *conclusion*.  Below is the truth table for the conditional operator.
 
-| `p` | `q` | `p -> q` |
+| `p` | `q` | `p → q` |
 |-----|-----|----------|
 | T | T | **T** |
 | T | F | **F** |
@@ -74,7 +74,7 @@ A compound proposition using a conditional operation is a *conditional propositi
 
 ***Note**: To explain why this truth table works, consider a conditional statement as a promise.  If a promise is made (`p = T`) and the follow-through is not made (`q = F`), the promise is broken and is marked as false.  If the promise was never made (`p = F`), the outcome doesn't matter and no promise is broken, and we mark that as true.*
 
-Below are some Englsh statements that represent the same conditional operation (`p -> q`):
+Below are some Englsh statements that represent the same conditional operation (`p → q`):
 
 | Statement | Example |
 |-----------|---------|
@@ -86,12 +86,12 @@ Below are some Englsh statements that represent the same conditional operation (
 | `p` is sufficient for `q` | Mowing the lawn is sufficient for me to pay you. |
 | `q` is necessary for `p` | Mowing the lawn is necessary for me to pay you. |
 
-Given a conditional statement `p -> q`, we define three more variation as:
-- *Converse*: `q -> p`
-- *Inverse*: `~p -> ~q`
-- *Contrapositive*: `~q -> ~p`
+Given a conditional statement `p → q`, we define three more variation as:
+- *Converse*: `q → p`
+- *Inverse*: `~p → ~q`
+- *Contrapositive*: `~q → ~p`
 
-A *biconditional statement* is only true when the conditional statement and the converse are both true.  It is read as *if and only if* or *iff* and is denoted as `p <-> q`.
+A *biconditional statement* is only true when the conditional statement and the converse are both true.  It is read as *if and only if* or *iff* and is denoted as `p <→ q`.
 
 ## Logical Equivalence
 A *tautology* is a compound proposition that always evaluates to `true`, regardless of the truth value of the individual propositions.
@@ -134,7 +134,7 @@ If two propositions are logically equivalent, then one can be substituted for th
 | Complement Laws | `p ∧ ~p ≡ F`, `~T ≡ F` | `p ∨ ~p ≡ T`, `~F = T` |
 | De Morgan's Laws | `~(p ∨ q) ≡ ~p ∧ ~q` | `~(p ∧ q) ≡ ~p ∨ ~q` |
 | Absorption Laws | `p ∨ (p ∧ q) ≡ p` | `p ∧ (p ∨ q) ≡ p` |
-| Conditional Identities | `p -> q = ~p ∨ q` | `p <-> q ≡ (p -> q) ∧ (q -> p)` |
+| Conditional Identities | `p → q = ~p ∨ q` | `p <→ q ≡ (p → q) ∧ (q → p)` |
 
 ## Predicates and Quantifiers
 A *predicate* is a statement whose truth value depends on at least one variable.  For example, `P(x,y) := (x^2 = y)` is a predicate while `P(2,4)` is a proposition.
@@ -164,8 +164,8 @@ De Morgan's Laws for nested quantifiers:
 - `¬∃x ∃y P(x,y) ≡  ∀x ∀y ¬P(x,y)`
 
 Here are some examples of using nested quantifiers:
-- Everyone else: `∀x ∀y ((x ≠ y) -> P(x,y))`
-- Exactly one: `∃x (P(x) ∧ ∀y (y ≠ x) -> ~P(y)))`
+- Everyone else: `∀x ∀y ((x ≠ y) → P(x,y))`
+- Exactly one: `∃x (P(x) ∧ ∀y (y ≠ x) → ~P(y)))`
 
 ## Logical Reasoning
 An *argument* is a sequence of propositions, called *hypotheses*, followed by a final proposition, called a *conclusion*.
@@ -191,14 +191,14 @@ Here are the rules of inference for valid arguments:
 - Modus Ponens
 ```blank
 p
-p -> q
+p → q
 ------
 ∴ q
 ```
 - Modus Tollens
 ```blank
 ~q
-p -> q
+p → q
 ------
 ~p
 ```
@@ -223,10 +223,10 @@ q
 ```
 - Hypothetical Syllogism
 ```blank
-p -> q
-q -> r
+p → q
+q → r
 --------
-∴ p -> r
+∴ p → r
 ```
 - Disjunctive Syllogism
 ```blank

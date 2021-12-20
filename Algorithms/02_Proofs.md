@@ -17,8 +17,8 @@ A *rational number* indicates that there exists some `x` and `y`, where `y ≠ 0
 An integer `y` *divides* `x` if and only iff `y % x = 0`.  The notation for this is `x|y`.
 
 We define prime and composite numbers as logical expressions.
-- *Prime Number*: `∃ m ((m ∈ ℤ ∧ m < n) ∧ n % m = 0 -> m = 1 ∨ m = n)`.
-- *Composite number*: `∃ m ((m ∈ ℤ ∧ m < n) -> n % m = 0)`.
+- *Prime Number*: `∃ m ((m ∈ ℤ ∧ m < n) ∧ n % m = 0 → m = 1 ∨ m = n)`.
+- *Composite number*: `∃ m ((m ∈ ℤ ∧ m < n) → n % m = 0)`.
 
 ## Proof-Writing
 Proofs are written in the same format to ensure consistency and readibility.  The idea of a proof is to convey an idea to another person, so it is important the person can understand the formatting of the proof.
@@ -60,7 +60,7 @@ Since the equality stands for all n in the domain, we have proved that n^2 = |n|
 
 Example: Among two consecutive integers, one is odd and one is even.
 ```blank
-Let x be an integer. x can be either odd or even, meaning x = 2k or x = 2k + 1.  Then, x + 1 can either hold the value x = 2k + 1 or x = 2k + 2, respectively.  In both cases, we notice that the parity of the number changes (from even->odd and odd->even respectively).  Therefore, for two consecutive integers, one is odd and one is even. QED.
+Let x be an integer. x can be either odd or even, meaning x = 2k or x = 2k + 1.  Then, x + 1 can either hold the value x = 2k + 1 or x = 2k + 2, respectively.  In both cases, we notice that the parity of the number changes (from even→odd and odd→even respectively).  Therefore, for two consecutive integers, one is odd and one is even. QED.
 ```
 
 #### Existential Proofs
@@ -72,7 +72,7 @@ Let x be a number.  If x is valued at 0, we notice that x^2 = 0 = x.  Since x = 
 ```
 
 #### Proof by Contrapositive
-*Proof by Contrapositive* uses the fact that if `p -> q` is true, then so is `~q -> ~p`.
+*Proof by Contrapositive* uses the fact that if `p → q` is true, then so is `~q → ~p`.
 
 #### Proof by Contradiction
 *Proof by Contradiction* assumes that the theorem provided is false, and then works to prove that the theorem is false and looks for a logical error in proving the false statement.
