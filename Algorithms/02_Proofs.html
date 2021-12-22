@@ -172,39 +172,39 @@ pre code {
 
 <div id="numbers" class="section level2">
 <h2>Numbers</h2>
-<p>The <em>parity</em> of a number is whether the number is odd or even. We define odd and even numbers logically, as:</p>
+<p>The <strong><em>parity</em></strong> of a number is whether the number is odd or even. We define odd and even numbers logically, as:</p>
 <ul>
-<li><em>Even number</em>: Follows <span class="math inline">\(x = 2k\)</span>, <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
-<li><em>Odd number</em>: Follows <span class="math inline">\(x = 2k + 1\)</span>, <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><strong><em>Even number</em></strong>: Follows <span class="math inline">\(x = 2k\)</span>, <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
+<li><strong><em>Odd number</em></strong>: Follows <span class="math inline">\(x = 2k + 1\)</span>, <span class="math inline">\(k \in \mathbb{Z}\)</span></li>
 </ul>
-<p>A <em>rational number</em> indicates that there exists some <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, where <span class="math inline">\(y \neq 0\)</span>, such that <span class="math inline">\(r = \frac{x}{y}\)</span>.</p>
-<p>An integer <span class="math inline">\(y\)</span> <em>divides</em> <span class="math inline">\(x\)</span> if and only iff <span class="math inline">\(y % x = 0\)</span>. The notation for this is <span class="math inline">\(x|y\)</span>.</p>
+<p>A <strong><em>rational number</em></strong> indicates that there exists some <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, where <span class="math inline">\(y \neq 0\)</span>, such that <span class="math inline">\(r = \frac{x}{y}\)</span>.</p>
+<p>An integer <span class="math inline">\(y\)</span> <strong><em>divides</em></strong> <span class="math inline">\(x\)</span> if and only iff <span class="math inline">\(y % x = 0\)</span>. The notation for this is <span class="math inline">\(x|y\)</span>.</p>
 <p>We define prime and composite numbers as logical expressions.</p>
 <ul>
-<li><em>Prime Number</em>: <span class="math inline">\(\exists m ((m \in \mathbb{Z} \land m &lt; n) \land n % m = 0 \rightarrow m = 1 \lor m = n)\)</span>.</li>
-<li><em>Composite number</em>: <span class="math inline">\(\exists m ((m \in \mathbb{Z} \land m &lt; n) \rightarrow n % m = 0)\)</span>.</li>
+<li><strong><em>Prime Number</em></strong>: <span class="math inline">\(\exists m ((m \in \mathbb{Z} \land m &lt; n) \land n % m = 0 \rightarrow m = 1 \lor m = n)\)</span>.</li>
+<li><strong><em>Composite number</em></strong>: <span class="math inline">\(\exists m ((m \in \mathbb{Z} \land m &lt; n) \rightarrow n % m = 0)\)</span>.</li>
 </ul>
 </div>
 <div id="proof-writing" class="section level2">
 <h2>Proof-Writing</h2>
-<p>Proofs are written in the same format to ensure consistency and readibility. The idea of a proof is to convey an idea to another person, so it is important the person can understand the formatting of the proof.</p>
+<p>Proofs are written in the same format to ensure consistency and readability. The idea of a proof is to convey an idea to another person, so it is important the person can understand the formatting of the proof.</p>
 <pre class="cpp"><code>Theorem: /* insert theorem */
 Proof: /* Start writing proof
 *
 *
 *
 */ QED.</code></pre>
-<p><em><strong>Note</strong>: A common alternative for QED is <span class="math inline">\(\square\)</span>.</em></p>
-<p>A <em>universal statement</em> is a statement applicable to the entire domain. This is equivalent to the <span class="math inline">\(∀\)</span> operator and contain “For all” or “For every”.</p>
-<p>An <em>existential statement</em> is a statement that applies to a singular value. This is equivalent to the <span class="math inline">\(\exists\)</span> operator and contain “There exists”.</p>
+<p><strong><em>Note</em></strong>: A common alternative for QED is <span class="math inline">\(\square\)</span>.*</p>
+<p>A <strong><em>universal statement</em></strong> is a statement applicable to the entire domain. This is equivalent to the <span class="math inline">\(∀\)</span> operator and contain “For all” or “For every”.</p>
+<p>An <strong><em>existential statement</em></strong> is a statement that applies to a singular value. This is equivalent to the <span class="math inline">\(\exists\)</span> operator and contain “There exists”.</p>
 </div>
 <div id="methods-of-proofs" class="section level2">
 <h2>Methods of Proofs</h2>
 <p>There are many ways to make a proof, some being more concrete than others.</p>
-<p>The most common and less strict is the <em>direct proof</em>, which asks for the conclusion <span class="math inline">\(q\)</span> to be drawn from <span class="math inline">\(p\)</span> and known axioms. This gives the writer the most flexibility in how they want to write the proof.</p>
+<p>The most common and less strict is the <strong><em>direct proof</em></strong>, which asks for the conclusion <span class="math inline">\(q\)</span> to be drawn from <span class="math inline">\(p\)</span> and known axioms. This gives the writer the most flexibility in how they want to write the proof.</p>
 <div id="proof-by-exhaustion" class="section level4">
 <h4>Proof by Exhaustion</h4>
-<p><em>Proof by exhaustion</em> is a method that proves the theorem for every value in the domain. This is commonly done one-at-a-time for small domains of integer values.</p>
+<p><strong><em>Proof by exhaustion</em></strong> is a method that proves the theorem for every value in the domain. This is commonly done one-at-a-time for small domains of integer values.</p>
 <p>Example: If <span class="math inline">\(n \in {-1, 0, 1}\)</span>, prove that <span class="math inline">\(n^2 = |n|\)</span>.</p>
 <pre class="blank"><code>Theorem: If n \in {-1, 0, 1}, then n^2 = |n|.
 Proof: We will prove via exhaustion that n^2 = |n| for all n in the domain.
@@ -215,27 +215,27 @@ Since the equality stands for all n in the domain, we have proved that n^2 = |n|
 </div>
 <div id="universal-generalization" class="section level4">
 <h4>Universal Generalization</h4>
-<p><em>Universal generalization</em> is the process of naming an arbitrary object, proves that the arbitary statement is valid and provides no more assumptions about the value of the arbitary object.</p>
+<p><strong><em>Universal generalization</em></strong> is the process of naming an arbitrary object, proves that the arbitrary statement is valid and provides no more assumptions about the value of the arbitrary object.</p>
 <p>Example: Among two consecutive integers, one is odd and one is even.</p>
 <pre class="blank"><code>Let x be an integer. x can be either odd or even, meaning x = 2k or x = 2k + 1.  Then, x + 1 can either hold the value x = 2k + 1 or x = 2k + 2, respectively.  In both cases, we notice that the parity of the number changes (from even-&gt;odd and odd-&gt;even respectively).  Therefore, for two consecutive integers, one is odd and one is even. QED.</code></pre>
 </div>
 <div id="existential-proofs" class="section level4">
 <h4>Existential Proofs</h4>
-<p>An <em>existence proof</em> proves an existential statement. This type of proof only needs to show that a value exists; it does not matter how the value was found but rather that the value exists and it adheres to the theorem.</p>
+<p>An <strong><em>existence proof</em></strong> proves an existential statement. This type of proof only needs to show that a value exists; it does not matter how the value was found but rather that the value exists and it adheres to the theorem.</p>
 <p>Example: Prove that there exists some number <span class="math inline">\(x\)</span> such that <span class="math inline">\(x^2 = x\)</span>.</p>
 <pre class="blank"><code>Let x be a number.  If x is valued at 0, we notice that x^2 = 0 = x.  Since x = 0 makes the theorem true, there exists some x such that x^2 = x. QED.</code></pre>
 </div>
 <div id="proof-by-contrapositive" class="section level4">
 <h4>Proof by Contrapositive</h4>
-<p><em>Proof by Contrapositive</em> uses the fact that if <span class="math inline">\(p \rightarrow q\)</span> is true, then so is <span class="math inline">\(\neg q \rightarrow \neg p\)</span>.</p>
+<p><strong><em>Proof by Contrapositive</em></strong> uses the fact that if <span class="math inline">\(p \rightarrow q\)</span> is true, then so is <span class="math inline">\(\neg q \rightarrow \neg p\)</span>.</p>
 </div>
 <div id="proof-by-contradiction" class="section level4">
 <h4>Proof by Contradiction</h4>
-<p><em>Proof by Contradiction</em> assumes that the theorem provided is false, and then works to prove that the theorem is false and looks for a logical error in proving the false statement.</p>
+<p><strong><em>Proof by Contradiction</em></strong> assumes that the theorem provided is false, and then works to prove that the theorem is false and looks for a logical error in proving the false statement.</p>
 </div>
 <div id="proof-by-cases" class="section level4">
 <h4>Proof by Cases</h4>
-<p><em>Proof by cases</em> uses cases that encompass the full domain such that each case is easier to prove. This is similar to proof by exhaustion, but rather concatenates cases for larger domain into “buckets” where each bucket has the same proof.</p>
+<p><strong><em>Proof by cases</em></strong> uses cases that encompass the full domain such that each case is easier to prove. This is similar to proof by exhaustion, but rather concatenates cases for larger domain into “buckets” where each bucket has the same proof.</p>
 <p>Common examples of cases are positive and negative numbers, even and odd numbers, factors of a number, etc.</p>
 </div>
 </div>
@@ -245,14 +245,14 @@ Since the equality stands for all n in the domain, we have proved that n^2 = |n|
 <ul>
 <li><em>Thus</em>/<em>Therefore</em>: Follows a previous statement to a new statement.</li>
 <li><em>Let</em>: Used to introduce a new variable.</li>
-<li><em>Suppose</em>: Introuces a new assumption.</li>
+<li><em>Suppose</em>: Introduces a new assumption.</li>
 <li><em>Since</em>: Reminder of an earlier (or obvious) fact.</li>
 <li><em>By definition</em>: Fact known because of a definition.</li>
 <li><em>By assumption</em>: Fact known because of a stated assumption.</li>
 <li><em>In other words</em>: Rephrase a statement more specifically.</li>
 <li><em>Gives</em>/<em>Yields</em>: One equation follows another.</li>
 </ul>
-<p><em>Without Loss of Generality (WLOG)</em> is a statement that concatenates very similar cases to avoid repetition. This can be used very effectively but also very incorrectly, so be careful to use it properly to avoid mistakes.</p>
+<p><strong><em>Without Loss of Generality (WLOG)</em></strong> is a statement that concatenates very similar cases to avoid repetition. This can be used very effectively but also very incorrectly, so be careful to use it properly to avoid mistakes.</p>
 </div>
 
 

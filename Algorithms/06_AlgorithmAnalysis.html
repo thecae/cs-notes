@@ -172,7 +172,7 @@ pre code {
 
 <div id="algorithms" class="section level2">
 <h2>Algorithms</h2>
-<p>An <em>algorithm</em> is a step-by-step method for solving a problem. A description of an algorithm usually includes:</p>
+<p>An <strong><em>algorithm</em></strong> is a step-by-step method for solving a problem. A description of an algorithm usually includes:</p>
 <ul>
 <li>A name for the algorithm</li>
 <li>A brief description of the task performed by the algorithm</li>
@@ -180,13 +180,13 @@ pre code {
 <li>A description of the output</li>
 <li>A sequence of steps to follow</li>
 </ul>
-<p>Algorithms are often described in <em>pseudocode</em>, which is a language in between written English and a computer language. Steps are formatted carefully as indented lists so as to convey the structure of the approach. The steps themselves are expressed in brief English phrases or mathematical symbols.</p>
-<p>An important type of step in an algorithm is an <em>assignment</em>, in which a variable is given a value. An assignment operator is denoted by: <code>x := y</code>.</p>
-<p>The output of an algorithm is specified by a <em>return</em> statement. For example, the statement <em>Return(x)</em> would return the value of x as the output of the algorithm. A return statement in the middle of an algorithm causes the execution of the algorithm to stop at that point and return the indicated value.</p>
+<p>Algorithms are often described in <strong><em>pseudo-code</em></strong>, which is a language in between written English and a computer language. Steps are formatted carefully as indented lists so as to convey the structure of the approach. The steps themselves are expressed in brief English phrases or mathematical symbols.</p>
+<p>An important type of step in an algorithm is an <strong><em>assignment</em></strong>, in which a variable is given a value. An assignment operator is denoted by: <code>x := y</code>.</p>
+<p>The output of an algorithm is specified by a <strong><em>return</em></strong> statement. For example, the statement <code>Return(x)</code> would return the value of x as the output of the algorithm. A return statement in the middle of an algorithm causes the execution of the algorithm to stop at that point and return the indicated value.</p>
 </div>
 <div id="the-if-statement-and-if-else-statement" class="section level2">
 <h2>The If-Statement and If-Else-Statement</h2>
-<p>An <em>if-statement</em> tests a condition, and executes one or more instructions if the condition evaluates to true. In a single line if-statement, a condition and instruction appear on the same line.</p>
+<p>An <strong><em>if-statement</em></strong> tests a condition, and executes one or more instructions if the condition evaluates to true. In a single line if-statement, a condition and instruction appear on the same line.</p>
 <pre class="cpp"><code>if (x = 5), y := 7</code></pre>
 <p>An if-statement can also be followed by a sequence of indented operations with a final end-if statement. In the block of code below, all <span class="math inline">\(n\)</span> operations would be executed if the condition evaluates to true. If the condition evaluates to false, then the algorithm proceeds with the next instruction after the end-if.</p>
 <pre class="cpp"><code>if ( condition )
@@ -195,7 +195,7 @@ pre code {
     . . .
     Step n
 end-if</code></pre>
-<p>An <em>if-else-statement</em> tests a condition, executes one or more instructions if the condition evaluates to true, and executes a different set of instructions if the condition evaluates to false. The steps to be executed if the condition evaluates to true are indented below the if-statement. The steps to be executed if the condition evaluates for false are indented below the else statement, followed by a final end-if statement.</p>
+<p>An <strong><em>if-else-statement</em></strong> tests a condition, executes one or more instructions if the condition evaluates to true, and executes a different set of instructions if the condition evaluates to false. The steps to be executed if the condition evaluates to true are indented below the if-statement. The steps to be executed if the condition evaluates for false are indented below the else statement, followed by a final end-if statement.</p>
 <pre class="cpp"><code>if ( condition )
     /* One or more steps */
 else
@@ -204,32 +204,32 @@ end-if</code></pre>
 </div>
 <div id="loops" class="section level2">
 <h2>Loops</h2>
-<p>In a <em>for-loop</em>, a block of instructions is executed a fixed number of times as specified in the first line of the for-loop, which defines an index, a starting value for the <em>index</em>, and a final value for the index. Each repetition of the block of instructions inside the for-loop is called an <em>iteration</em>. The index is initially assigned a value equal to the starting value, and is incremented just before the next iteration begins. The final iteration of the for-loop happens when the index reaches the final value.</p>
+<p>In a <strong><em>for-loop</em></strong>, a block of instructions is executed a fixed number of times as specified in the first line of the for-loop, which defines an index, a starting value for the <strong><em>index</em></strong>, and a final value for the index. Each repetition of the block of instructions inside the for-loop is called an <strong><em>iteration</em></strong>. The index is initially assigned a value equal to the starting value, and is incremented just before the next iteration begins. The final iteration of the for-loop happens when the index reaches the final value.</p>
 <pre class="cpp"><code>for i = s to t
     Step 1
     Step 2
     . . .
     Step n
 end-for</code></pre>
-<p>The <em>while-loop</em> is similar to the for-loop in that it provides a way to specify that a sequence of steps should be repeated. A for-loop specifies the number of iterations in advance, via the beginning and ending index values. A while-loop iterates an unknown number of times, ending when a certain condition becomes false.</p>
+<p>The <strong><em>while-loop</em></strong> is similar to the for-loop in that it provides a way to specify that a sequence of steps should be repeated. A for-loop specifies the number of iterations in advance, via the beginning and ending index values. A while-loop iterates an unknown number of times, ending when a certain condition becomes false.</p>
 <pre class="cpp"><code>while ( condition )
     Step 1
     Step 2
     . . .
     Step n
 end-while</code></pre>
-<p>A <em>nested loop</em> is a loop that appears within another loop. The nested loop, known as the inner loop, is treated as a sequence of steps inside the outer loop.</p>
+<p>A <strong><em>nested loop</em></strong> is a loop that appears within another loop. The nested loop, known as the inner loop, is treated as a sequence of steps inside the outer loop.</p>
 </div>
 <div id="asymptotic-growth-of-functions" class="section level2">
 <h2>Asymptotic Growth of Functions</h2>
-<p>Let f be a function that maps positive integers to positive real numbers (<span class="math inline">\(f : \mathbb{Z}^+ → \mathbb{Z}^+\)</span>). The <em>asymptotic growth</em> of the function <span class="math inline">\(f\)</span> is a measure of how fast the output <span class="math inline">\(f(n)\)</span> grows as the input <span class="math inline">\(n\)</span> grows. The classification of functions using <span class="math inline">\(O\)</span>, <span class="math inline">\(\Omega\)</span>, and <span class="math inline">\(\Theta\)</span> notation (called <em>asymptotic notation</em>) provides a way to concisely characterize the asymptotic growth of a function. Asymptotic notation is a useful tool for evaluating the efficiency of algorithms.</p>
-<p>The notation <span class="math inline">\(f = O(g)\)</span> is read “f is Oh of g”. <span class="math inline">\(f = O(g)\)</span> essentially means that the function <span class="math inline">\(f(n)\)</span> is less than or equal to <span class="math inline">\(g(n)\)</span>, if constant factors are omitted and small values for <span class="math inline">\(n\)</span> are ignored. In the expressions <span class="math inline">\(7n^3\)</span> and <span class="math inline">\(5n^2\)</span>, the <span class="math inline">\(7\)</span> and the <span class="math inline">\(5\)</span> are called <em>constant factors</em> because the values of <span class="math inline">\(7\)</span> and <span class="math inline">\(5\)</span> do not depend on the variable <span class="math inline">\(n\)</span>. If <span class="math inline">\(f\)</span> is <span class="math inline">\(O(g)\)</span>, then there is a positive number <span class="math inline">\(c\)</span> such that when <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(c\cdot g(n)\)</span> are graphed, the graph of <span class="math inline">\(c\cdot g(n)\)</span> will eventually cross <span class="math inline">\(f(n)\)</span> and remain higher than <span class="math inline">\(f(n)\)</span> as <span class="math inline">\(n\)</span> gets large.</p>
+<p>Let f be a function that maps positive integers to positive real numbers (<span class="math inline">\(f : \mathbb{Z}^+ → \mathbb{Z}^+\)</span>). The <strong><em>asymptotic growth</em></strong> of the function <span class="math inline">\(f\)</span> is a measure of how fast the output <span class="math inline">\(f(n)\)</span> grows as the input <span class="math inline">\(n\)</span> grows. The classification of functions using <span class="math inline">\(O\)</span>, <span class="math inline">\(\Omega\)</span>, and <span class="math inline">\(\Theta\)</span> notation (called <strong><em>asymptotic notation</em></strong>) provides a way to concisely characterize the asymptotic growth of a function. Asymptotic notation is a useful tool for evaluating the efficiency of algorithms.</p>
+<p>The notation <span class="math inline">\(f = O(g)\)</span> is read “f is Oh of g”. <span class="math inline">\(f = O(g)\)</span> essentially means that the function <span class="math inline">\(f(n)\)</span> is less than or equal to <span class="math inline">\(g(n)\)</span>, if constant factors are omitted and small values for <span class="math inline">\(n\)</span> are ignored. In the expressions <span class="math inline">\(7n^3\)</span> and <span class="math inline">\(5n^2\)</span>, the <span class="math inline">\(7\)</span> and the <span class="math inline">\(5\)</span> are called <strong><em>constant factors</em></strong> because the values of <span class="math inline">\(7\)</span> and <span class="math inline">\(5\)</span> do not depend on the variable <span class="math inline">\(n\)</span>. If <span class="math inline">\(f\)</span> is <span class="math inline">\(O(g)\)</span>, then there is a positive number <span class="math inline">\(c\)</span> such that when <span class="math inline">\(f(n)\)</span> and <span class="math inline">\(c\cdot g(n)\)</span> are graphed, the graph of <span class="math inline">\(c\cdot g(n)\)</span> will eventually cross <span class="math inline">\(f(n)\)</span> and remain higher than <span class="math inline">\(f(n)\)</span> as <span class="math inline">\(n\)</span> gets large.</p>
 <p>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be two functions from <span class="math inline">\(\mathbb{Z}^+\)</span> to <span class="math inline">\(\mathbb{R}^+\)</span>. Then <span class="math inline">\(f = O(g)\)</span> if there are positive real numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(n_0\)</span> such that for any <span class="math inline">\(n \in \mathbb{Z}^+\)</span> such that <span class="math inline">\(n \geq n_0\)</span>, <span class="math inline">\(f(n) \leq c\cdot g(n)\)</span>.</p>
 <p>The <span class="math inline">\(O\)</span> notation serves as a rough upper bound for functions (disregarding constants and small input values). The <span class="math inline">\(\Omega\)</span> notation is similar, except that it provides a lower bound on the growth of a function.</p>
 <p>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be two functions from <span class="math inline">\(\mathbb{Z}^+\)</span> to <span class="math inline">\(\mathbb{R}^+\)</span>. Then <span class="math inline">\(f = \Omega(g)\)</span> if there are positive real numbers <span class="math inline">\(c\)</span> and <span class="math inline">\(n_0\)</span> such that for any <span class="math inline">\(n \in \mathbb{Z}^+\)</span> such that <span class="math inline">\(n \geq n_0\)</span>, <span class="math inline">\(f(n) \geq c\cdot g(n)\)</span>.</p>
 <p>The <span class="math inline">\(\Theta\)</span> notation indicates that two functions have the same rate of growth.</p>
 <p>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be two functions <span class="math inline">\(\mathbb{Z}^+\)</span> to <span class="math inline">\(\mathbb{R}^+\)</span>. <span class="math inline">\(f = \Theta(g)\)</span> if <span class="math inline">\(f = O(g)\)</span> and <span class="math inline">\(f = \Omega(g)\)</span>.</p>
-<p>If <span class="math inline">\(f = \Theta(g)\)</span>, then <span class="math inline">\(f\)</span> is said to be <em>order</em> of <span class="math inline">\(g\)</span>.</p>
+<p>If <span class="math inline">\(f = \Theta(g)\)</span>, then <span class="math inline">\(f\)</span> is said to be <strong><em>order</em></strong> of <span class="math inline">\(g\)</span>.</p>
 <p>A function that does not depend on <span class="math inline">\(n\)</span> at all is called a constant function. <span class="math inline">\(f(n) = 17\)</span> is an example of a constant function. Any constant function is <span class="math inline">\(\Theta(1)\)</span>. A function <span class="math inline">\(f(n)\)</span> is said to be polynomial if <span class="math inline">\(f(n)\)</span> is <span class="math inline">\(\Theta(nk)\)</span> for some positive real number <span class="math inline">\(k\)</span>.</p>
 <table>
 <thead>
@@ -280,13 +280,13 @@ end-while</code></pre>
 </div>
 <div id="algorithm-analysis" class="section level2">
 <h2>Algorithm Analysis</h2>
-<p>The amount of resources used by an algorithm is referred to as the algorithm’s <em>computational complexity</em>. The primary resources to optimize are the time the algorithm requires to run (time complexity) and the amount of memory used (<em>space complexity</em>).</p>
+<p>The amount of resources used by an algorithm is referred to as the algorithm’s <strong><em>computational complexity</em></strong>. The primary resources to optimize are the time the algorithm requires to run (time complexity) and the amount of memory used (<strong><em>space complexity</em></strong>).</p>
 <p>The time complexity of an algorithm is defined by a function <span class="math inline">\(f : \mathbb{Z}^+ → \mathbb{Z}^+\)</span> such that <span class="math inline">\(f(n)\)</span> is the maximum number of atomic operations performed by the algorithm on any input of size <span class="math inline">\(n\)</span>.</p>
-<p>The <em>asymptotic time complexity</em> of an algorithm is the rate of asymptotic growth of the algorithm’s time complexity function <span class="math inline">\(f(n)\)</span>.</p>
-<p>The most common way to analyze the complexity of algorithms whose run time varies with different features of the input is to count the number of operations performed in the worst (most time-consuming) case. The <em>worst-case analysis</em> of an algorithm evaluates the time complexity of the algorithm on the input of a particular size that takes the longest time.</p>
-<p>The <em>worst-case</em> time complexity function <span class="math inline">\(f(n)\)</span> is defined to be the maximum number of atomic operations the algorithm requires, where the maximum is taken over all inputs of size <span class="math inline">\(n\)</span>.</p>
+<p>The <strong><em>asymptotic time complexity</em></strong> of an algorithm is the rate of asymptotic growth of the algorithm’s time complexity function <span class="math inline">\(f(n)\)</span>.</p>
+<p>The most common way to analyze the complexity of algorithms whose run time varies with different features of the input is to count the number of operations performed in the worst (most time-consuming) case. The <strong><em>worst-case analysis</em></strong> of an algorithm evaluates the time complexity of the algorithm on the input of a particular size that takes the longest time.</p>
+<p>The <strong><em>worst-case</em></strong> time complexity function <span class="math inline">\(f(n)\)</span> is defined to be the maximum number of atomic operations the algorithm requires, where the maximum is taken over all inputs of size <span class="math inline">\(n\)</span>.</p>
 <p>The input of a given size that maximizes <span class="math inline">\(f(n)\)</span> is the worst-case input for the algorithm. For the searching algorithm given above, the worst-case input is when the item <span class="math inline">\(x\)</span> does not occur in the list at all. Determining an upper bound and a lower bound for the time complexity of an algorithm require two different tasks: - When proving an upper bound on the worst-case complexity of an algorithm (using Oh-notation), the upper bound must apply for every input of size <span class="math inline">\(n\)</span>. - When proving a lower bound for the worst-case complexity of an algorithm (using <span class="math inline">\(\Omega\)</span> notation), the lower bound need only apply for at least one possible input of size <span class="math inline">\(n\)</span>.</p>
-<p>Worst-case analysis can lead to overly pessimistic results in some cases if the worst-case input for an algorithm is highly unusual and the algorithm takes much less time on typical inputs. <em>Average-case analysis</em> is an alternative to worst-case analysis that tries to address this shortcoming. Average-case analysis evaluates the time complexity of an algorithm by determining the average running time of the algorithm on a random input.</p>
+<p>Worst-case analysis can lead to overly pessimistic results in some cases if the worst-case input for an algorithm is highly unusual and the algorithm takes much less time on typical inputs. <strong><em>Average-case analysis</em></strong> is an alternative to worst-case analysis that tries to address this shortcoming. Average-case analysis evaluates the time complexity of an algorithm by determining the average running time of the algorithm on a random input.</p>
 </div>
 
 
