@@ -1,11 +1,20 @@
-# ***Python***: An Introduction to Python
+---
+title: '***Python***: Introduction to Python'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 
 A computer program consists of instructions executing one at a time. Basic instruction types are:
-- *Input*: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.
-- *Process*: A program performs computations on that data, such as adding two values like x + y.
-- *Output*: A program puts that data somewhere, such as to a file, screen, or network.
+- ***Input***: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.
+- ***Process***: A program performs computations on that data, such as adding two values like $x + y$.
+- ***Output***: A program puts that data somewhere, such as to a file, screen, or network.
 
-Programs use variables to refer to data, like x, y, and z.
+Programs use variables to refer to data, like $x$, $y$, and $z$.
 
 **Hello World Program**:
 ```python
@@ -91,3 +100,4 @@ The most common error types are:
 | TypeError | An operation uses incorrect types – can occur if adding an integer to a string. |
 
 Remember that *IndentationError* happens because Python is an interpreted language and indentation matters for blocks of functions.  Rather than using brackets to open and close functions, Python uses function indents.
+
