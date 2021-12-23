@@ -1,34 +1,39 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: TREES
+---
+title: '***Data Structures***: Trees'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
+## Binary Trees
+A ***binary tree*** is a tree where each node has up to two children.  If a binary tree has one child, it must be the left child.
 
-# ***Data Structures***: Trees
-A *binary tree* is a tree where each node has up to two children.  If a binary tree has one child, it must be the left child.
-- *Leaf*: A tree with no children
-- *Internal Node*: A node with at least one child
-- *Parent*: The node whose child is ours
-- *Ancestors*: Parent, Parent's Parent, ... , Root
-- *Root*: Node with no parent
+- ***Leaf***: A tree with no children
+- ***Internal Node***: A node with at least one child
+- ***Parent***: The node whose child is ours
+- ***Ancestors***: Parent, Parent's Parent, ... , Root
+- ***Root***: Node with no parent
 
 There are a few more vocabulary words to describe trees:
-- *Edge*: A link between a parent and child
-- *Depth*: Number of edges from a given node to the root
-- *Level*: All nodes with the same depth
-- *Height*: Maximum depth of any node
+
+- ***Edge***: A link between a parent and child
+- ***Depth***: Number of edges from a given node to the root
+- ***Level***: All nodes with the same depth
+- ***Height***: Maximum depth of any node
 
 There are a few adjectives that describe graphs:
-- *Full*: Every node contains 0 or 2 children
-- *Complete*: All nodes but possibly the last contain the maximum number of nodes
-- *Perfect*: All internal nodes have two children and all leaf nodes are on the same level
 
-*Binary Space Partitioning (BSP)* is the process of repeatedly separating a region into two parts and cataloging objects in the region.
+- ***Full***: Every node contains 0 or 2 children
+- ***Complete***: All nodes but possibly the last contain the maximum number of nodes
+- ***Perfect***: All internal nodes have two children and all leaf nodes are on the same level
+
+***Binary Space Partitioning (BSP)*** is the process of repeatedly separating a region into two parts and cataloging objects in the region.
 
 ## Binary Search Trees
-A *Binary Search Tree (BST)* is a tree where every node's left subtree is less than the root node and the right subtree is greater than the root node.
+A ***Binary Search Tree (BST)*** is a tree where every node's left subtree is less than the root node and the right subtree is greater than the root node.
 
 Searching a BST is very simple:
 ```c++
@@ -46,14 +51,14 @@ BinarySearch(currentNode, destKey) {
 }
 ```
 
-A *successor* is the node that comes after a node in BST ordering.
+A ***successor*** is the node that comes after a node in BST ordering.
 
-A *predecessor* is the node that comes before a node in BST ordering.
+A ***predecessor*** is the node that comes before a node in BST ordering.
 
 ## Tree Traversal
-*Tree Traversal* is the process of visiting ever ndoe in a tree and performing an operation on that node.
+***Tree Traversal*** is the process of visiting ever ndoe in a tree and performing an operation on that node.
 
-*Inorder Traversal* visits nodes from smallest to largest and is used for sorting.
+***Inorder Traversal*** visits nodes from smallest to largest and is used for sorting.
 
 The algorithm is as follows:
 ```c++
@@ -84,9 +89,9 @@ BSTGetHeight(node) {
 
 ## Binary Tree Insertion
 There are three parts of Binary Tree insertion:
-- *Insert as left child*: If the new node's key is less than the current node, and the current node's left child is null, the algorithm assigns that node's left child with the new node.
-- *Insert as right child*: If the new node's key is greater than or equal to the current node, and the current node's right child is null, the algorithm assigns the node's right child with the new node.
-- *Search for insert location*: If the left (or right) child is not null, the algorithm assigns the current node with that child and continues searching for a proper insert location.
+- ***Insert as left child***: If the new node's key is less than the current node, and the current node's left child is null, the algorithm assigns that node's left child with the new node.
+- ***Insert as right child***: If the new node's key is greater than or equal to the current node, and the current node's right child is null, the algorithm assigns the node's right child with the new node.
+- ***Search for insert location***: If the left (or right) child is not null, the algorithm assigns the current node with that child and continues searching for a proper insert location.
 
 The algorithm is as follows:
 ```c++
@@ -122,9 +127,9 @@ BSTInsert(tree, node) {
 
 ## Binary Tree Removal
 Given a key, a BST remove operation removes the first-found matching node, restructuring the tree to preserve the BST ordering property. The algorithm first searches for a matching node just like the search algorithm. If found (call this node X), the algorithm performs one of the following sub-algorithms:
-- *Remove a leaf node*: If X has a parent (so X is not the root), the parent's left or right child (whichever points to X) is assigned with null. Else, if X was the root, the root pointer is assigned with null, and the BST is now empty.
-- *Remove an internal node with single child*: If X has a parent (so X is not the root), the parent's left or right child (whichever points to X) is assigned with X's single child. Else, if X was the root, the root pointer is assigned with X's single child.
-- *Remove an internal node with two children*: This case is the hardest. First, the algorithm locates X's successor (the leftmost child of X's right subtree), and copies the successor to X. Then, the algorithm recursively removes the successor from the right subtree.
+- ***Remove a leaf node***: If X has a parent (so X is not the root), the parent's left or right child (whichever points to X) is assigned with null. Else, if X was the root, the root pointer is assigned with null, and the BST is now empty.
+- ***Remove an internal node with single child***: If X has a parent (so X is not the root), the parent's left or right child (whichever points to X) is assigned with X's single child. Else, if X was the root, the root pointer is assigned with X's single child.
+- ***Remove an internal node with two children***: This case is the hardest. First, the algorithm locates X's successor (the leftmost child of X's right subtree), and copies the successor to X. Then, the algorithm recursively removes the successor from the right subtree.
 
 Since these cases are complicated, so is the algorithm:
 ```c++

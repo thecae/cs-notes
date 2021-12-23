@@ -1,13 +1,15 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: CONTAINERS
+---
+title: '***Data Structures***: Containers'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
-
-# ***Data Structures***: Containers
-A *range-based for loop* is a very powerful tool for iterating through each element in a container regardless of what container it is.  It's so powerful that you don't even need its data type.
+## Range-based For Loop
+A ***range-based for loop*** is a very powerful tool for iterating through each element in a container regardless of what container it is.  It's so powerful that you don't even need its data type.
 
 ```c++
 // initialize vector with some names
@@ -42,14 +44,15 @@ for (auto &grades : examGrades) {
 ```
 
 ## Container: Lists
-A *list* is a container of unordered elements.  It requires the header of `#include <list>` to utilize. 
+A ***list*** is a container of unordered elements.  It requires the header of `#include <list>` to utilize. 
 
 Unlike vectors, lists are doubly-linked, giving lists functions such as `push_front()` and `pop_front()`.
+
 - `front()`: The first element of a list
 - `back()`: The last element of a list
 - `remove()`: Removes a specific element from the list
 
-An *iterator* is an object that points to a location and can traverse the list bidirectionally.
+An ***iterator*** is an object that points to a location and can traverse the list bidirectionally.
 ```c++
 list<string>::iterator it;
 ```
@@ -78,7 +81,7 @@ erase(iterFirst, iterLast);
 ```
 
 ## Container: Pairs
-A *pair* is a container with two connected data elements.  It requires the header of `#include <utility>` to utilize.
+A ***pair*** is a container with two connected data elements.  It requires the header of `#include <utility>` to utilize.
 
 Pairs are created with the two data types placed in vector braces.
 ```c++
@@ -91,11 +94,12 @@ pairObj = make_pair(firstItem, secondItem);
 ```
 
 To access the elements of a pair, use:
+
 - `.first()`: Accesses the first element
 - `.second()`: Accesses the second element
 
 ## Container: Maps
-A *map is a container that associates keys to values. It requires the header of `#include <map>` to utilize.
+A ***map*** is a container that associates keys to values. It requires the header of `#include <map>` to utilize.
 
 Maps are created in the same way as pais.
 ```c++
@@ -118,7 +122,7 @@ The `count()` command returns `1` if a key is found, else `0`.
 The `erase()` command removes all key entities, while the `clear()` command removes all entities.
 
 ## Container: Sets
-A *set* is a collection of unique objects. It requires the header of `#include <set>` to utilize.
+A ***set*** is a collection of unique objects. It requires the header of `#include <set>` to utilize.
 ```c++
 std::set<ItemType> newSet;
 ```
@@ -140,7 +144,7 @@ newSet.erase(userInput).second; // returns 1 if erased, else 0
 ```
 
 ## Container: Queues
-A *queue* supports element insertion at the tail and removal at the head. It requires the header `#include <queue>` to utilize.
+A ***queue*** supports element insertion at the tail and removal at the head. It requires the header `#include <queue>` to utilize.
 ```c++
 std::queue<ItemType> que;
 ```
@@ -152,7 +156,7 @@ The `pop()` command removes an element from the front and decreases the queue's 
 The `front()` command returns the front element of a queue.
 
 ## Container: Deques
-A *deque*, or double-ended queue, supports insertion and removal at both the front and tail ends.  It requires the header `#include <deque>` to utilize.
+A ***deque***, or double-ended queue, supports insertion and removal at both the front and tail ends.  It requires the header `#include <deque>` to utilize.
 ```c++
 std::deque<ItemType> newDeque;
 ```

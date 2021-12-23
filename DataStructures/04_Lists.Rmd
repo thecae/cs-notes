@@ -1,15 +1,18 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: LISTS
+---
+title: '***Data Structures***: Lists'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
-
-# ***Data Structures***: Lists
-A *list* is a common ADT for holding ordered items.
+## Lists
+A ***list*** is a common ADT for holding ordered items.
 
 Some common list operations include:
+
 - `Append(list, x)`: Insert `x` at end of list
 - `Prepend(list, x)`: Insert `x` at beginning of list
 - `InsertAfter(list, w, x)`: Insert `x` after `w` in list
@@ -22,11 +25,13 @@ Some common list operations include:
 
 ## Singly-Linked List
 A singly-linked list is a list where each node has data and a pointer to the next node.  The last node points to `nullptr`.
-- *List Head*: The linked list's first node
-- *List Tail*: The linked list's last node
+
+- ***List Head***: The linked list's first node
+- ***List Tail***: The linked list's last node
 
 A linked list can be interpreted as follows:
-![LinkedList](https://cdn.discordapp.com/attachments/747649164116099082/920926123980881940/unknown.png)
+
+![](https://cdn.discordapp.com/attachments/747649164116099082/920926123980881940/unknown.png)
 
 The code to build the list is as follows.  Note that this function, along with all the ones below, use a `template`.  This idea is discussed in detail later.  It's simply a data type.
 ```c++
@@ -43,7 +48,7 @@ class LinkedList {
 };
 ```
 
-The List *Append* function inserts an item to the end of the list.  
+The List ***Append*** function inserts an item to the end of the list.  
 ```c++
 template <typename T>
 void LinkedList<T>::append(const T &data) {
@@ -69,7 +74,7 @@ void LinkedList<T>::append(const T &data) {
 }
 ```
 
-The List *Prepend* function inserts an item to the start of the list.
+The List ***Prepend*** function inserts an item to the start of the list.
 ```c++
 template <typename T>
 void LinkedList<T>::prepend(const T &data) {
@@ -83,7 +88,7 @@ void LinkedList<T>::prepend(const T &data) {
 }
 ```
 
-The List *InsertAfter* function inserts an item after a given item.
+The List ***InsertAfter*** function inserts an item after a given item.
 ```c++
 template <typename T>
 void LinkedList<T>::insertAfter(const T &prev, const T &data) {
@@ -109,7 +114,7 @@ void LinkedList<T>::insertAfter(const T &prev, const T &data) {
 
 ```
 
-The List *RemoveAfter* function removes the item after a given item.
+The List ***RemoveAfter*** function removes the item after a given item.
 ```c++
 template <typename T>
 void LinkedList<T>::removeAfter(const T &data) {
@@ -129,7 +134,7 @@ void LinkedList<T>::removeAfter(const T &data) {
 ```
 
 ## Doubly-Linked List
-A *doubly-linked list* is a list where each node has data, a pointer pointing to the next node, and a pointer to the previous node.
+A ***doubly-linked list*** is a list where each node has data, a pointer pointing to the next node, and a pointer to the previous node.
 
 The code to build the list is as follows.
 ```c++
@@ -294,7 +299,7 @@ int LinkedList<T>::search(const T &data) const {
 ```
 
 ## Circular Linked Lists
-A *circular linked list* is a linked list where the head and the tail nodes are at the same place.  Since none of these codes implemented tails in the list, the code for a circular linked list is not shown.
+A ***circular linked list*** is a linked list where the head and the tail nodes are at the same place.  Since none of these codes implemented tails in the list, the code for a circular linked list is not shown.
 
 Here is the algorithm for traversal:
 ```c++

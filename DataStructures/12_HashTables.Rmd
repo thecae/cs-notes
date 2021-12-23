@@ -1,23 +1,26 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: HASH TABLES
+---
+title: '***Data Structures***: Hash Tables'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
+## Hash Tables
+A ***hash table*** is a data structure that stores unordered items by mapping each item to an array location.  Hash tables are advantageous because it reduces the time complexity for search, insert, and remove from $O(n)$ to $O(1)$.
 
-# ***Data Structures***: Hash Tables
-A *hash table* is a data structure that stores unordered items by mapping each item to an array location.  Hash tables are advantageous because it reduces the time complexity for search, insert, and remove from O(n) to O(1).
-- *Key*: The value used to map to an index
-- *Bucket*: Hash table array element
-- *Hash Function*: A function that compute the index from the key
+- ***Key***: The value used to map to an index
+- ***Bucket***: Hash table array element
+- ***Hash Function***: A function that compute the index from the key
 
-The *Modulo Operator* is the most common and functional has function, which finds the remainder when dividing two numbers.
+The ***Modulo Operator*** is the most common and functional has function, which finds the remainder when dividing two numbers.
 
-A *collision* happens when an item being inserted maps to the same bucket as an existing item in the table.  This needs to be immediately resolved.
+A ***collision*** happens when an item being inserted maps to the same bucket as an existing item in the table.  This needs to be immediately resolved.
 
 ## Chaining
-*Chaining* is a collision-resolution technique that involves creating (linked) lists at each bucket to extend the amount of items that can be stored in the bucket.
+***Chaining*** is a collision-resolution technique that involves creating (linked) lists at each bucket to extend the amount of items that can be stored in the bucket.
 
 ```c++
 // hashInsert - inserts item into hash table
@@ -67,13 +70,13 @@ HashSearch(key) {
 ```
 
 ## Linear Probing
-*Linear Probing* is a collision-handling technique that starts at the mapped bucket, then linearly searches for the next open bucket and inserts at that position.
+***Linear Probing*** is a collision-handling technique that starts at the mapped bucket, then linearly searches for the next open bucket and inserts at that position.
 
-Probing identifies two different types of empty buckets: *empty-since-start* buckets and *empty-after-removal* buckets.
- - *Empty-since-start*: Buckets that have never had an item inserted into the bucket
- - *Empty-after-removal*: Buckets that are empty because an item was removed from them
+Probing identifies two different types of empty buckets: ***empty-since-start*** buckets and ***empty-after-removal*** buckets.
+ - ***Empty-since-start***: Buckets that have never had an item inserted into the bucket
+ - ***Empty-after-removal***: Buckets that are empty because an item was removed from them
 
-The Linear Probing *Insert* function stops at the first empty bucket, **regardless of its type**.  It returns a boolean of whether the item was inserted.
+The Linear Probing ***Insert*** function stops at the first empty bucket, **regardless of its type**.  It returns a boolean of whether the item was inserted.
 ```c++
 // HashInsert using linear probing
 HashInsert(key) {
@@ -99,7 +102,7 @@ HashInsert(key) {
 }
 ```
 
-The Linear Probing *Removal* function stops running at the first **empty-since-start** bucket, or if the item was found, or if all buckets are searched.
+The Linear Probing ***Removal*** function stops running at the first **empty-since-start** bucket, or if the item was found, or if all buckets are searched.
 ```c++
 // HashRemove using linear probing
 HashRemove(key) {
@@ -122,7 +125,7 @@ HashRemove(key) {
 }
 ```
 
-The Linear Probing *Search* function follows the same process as the *Remove* function.
+The Linear Probing ***Search*** function follows the same process as the ***Remove*** function.
 ```c++
 // HashSearch using linear probing
 HashSearch(key) {
@@ -148,11 +151,11 @@ HashSearch(key) {
 ```
 
 ## Quadratic Probing
-*Quadratic Probing* is a collision-handling technique that starts at the key-mapped bucket and quadratically-searches until an empty bucket is defined.
+***Quadratic Probing*** is a collision-handling technique that starts at the key-mapped bucket and quadratically-searches until an empty bucket is defined.
 
 Quadratic probing follows a user-defined iteration function, that which goes through the sequential points to find the next open space.  Quadratic probing also uses the same convention as linear probing when dealing with empty-since-start and empty-after-removal buckets.
 
-The standard equation for quadratic probing is: `(Hash(key) + c1(i) + c2(i * i)) % table.size()`, where `i` is the iterator.
+The standard equation for quadratic probing is: $(H(key) + c_1(i) + c_2(i^2)) \,\% \, N$, where $i$ is the iterator and $N$ is the table size.
 
 ```c++
 // HashInsert using quadratic probing
@@ -230,12 +233,12 @@ HashSearch(item) {
 ```
 
 ## Double Hashing
-*Double Hashing* is a collision-resolution technique that uses two different hash functions to compute indices.
+***Double Hashing*** is a collision-resolution technique that uses two different hash functions to compute indices.
 
-The standard probing equation is: `(H1(key) + H2(key)) % table.size()`.
+The standard probing equation is: $(H_1(key) + H_2(key)) \, % \, N$.
 
 ## Hash Table Resizing
-To *resize* a hash table is to increase the number of buckets, preserving all original elements.  This does not mean, however, that they will be matched with the same index value, but rather all elements of the old table wil be in the new table.
+To ***resize*** a hash table is to increase the number of buckets, preserving all original elements.  This does not mean, however, that they will be matched with the same index value, but rather all elements of the old table wil be in the new table.
 
 The common resize value is the **next prime number greater than twice the current size**.
 
@@ -272,16 +275,16 @@ Hash(key, tableSize) {
 ```
 
 Resizing should be considered when one of the following exceeds a certain threshold:
-- *Load Factor*: Percentage of filled buckets (typically `> 60%`)
-- *Open Addressing Resolution*: Number of collisions per insert (typically `> table.size()/3`)
-- *Chaining Resolution*: Size of Bucket's Linked List (typically `> 4`)
+- ***Load Factor***: Percentage of filled buckets (typically $> 60\%$)
+- ***Open Addressing Resolution***: Number of collisions per insert (typically $> N/3$)
+- ***Chaining Resolution***: Size of Bucket's Linked List (typically $> 4$)
 
 ## Methods of Hashing
 There are many ways to hash a function, some of them more consistent than others.
 
-A *perfect hash function* maps items to buckets perfectly and without collision.
+A ***perfect hash function*** maps items to buckets perfectly and without collision.
 
-*Modulo hash functions* uses division remainder of key and table size.
+***Modulo hash functions*** uses division remainder of key and table size.
 ```c++
 // Modulo hash function
 Hash(key, size) {
@@ -289,7 +292,7 @@ Hash(key, size) {
 }
 ```
 
-*Mid-Square hash functions* extracts the middle `R` digits from a number's square and returns `R % table.size()`.  This is primarily done bitwise for speed.
+***Mid-Square hash functions*** extracts the middle $R$ digits from a number's square and returns $R \, \% \, N$.  This is primarily done bitwise for speed.
 ```c++
 // Mid square hash function
 MidSquareHash(key, R, size) {
@@ -303,9 +306,9 @@ MidSquareHash(key, R, size) {
 }
 ```
 
-An easier function to implement is to use a time-based seed function, which relies on similar logic but does all computations in base 10.
+An easier function to implement is to use a time-based seed function, which relies on similar logic but does all computations in base $10$.
 
-**Multiplicative String hash functions* repeatedly multiplies hash functions and adds the ASCII value of each string character to the function.
+***Multiplicative String hash functions*** repeatedly multiplies hash functions and adds the ASCII value of each string character to the function.
 ```c++
 // Multiplicative string hash function
 HashMultiplicative(key, hashMultiplier, size) {
@@ -322,7 +325,7 @@ HashMultiplicative(key, hashMultiplier, size) {
 ```
 
 ## Direct Access Functions
-*Direct Access Functions* use the item's key as the bucket index. This makes their code and implementation super simple
+***Direct Access Functions*** use the item's key as the bucket index. This makes their code and implementation super simple.
 ```c++
 // HashInsert using Direct Access
 HashInsert(item) {
@@ -347,8 +350,8 @@ HashSearch(key) {
 ```
 
 ## Cryptography
-*Cryptography* is the field of study focused on transmitting data securely.  It uses *encryption* to alter data to hide its meaning, then *decryption* to reconstruct the original data from the encrypted data.
+***Cryptography*** is the field of study focused on transmitting data securely.  It uses ***encryption*** to alter data to hide its meaning, then ***decryption*** to reconstruct the original data from the encrypted data.
 
-*Cryptographic Hashing Functions* are hash functions that are made specifically for cryptography.
+***Cryptographic Hashing Functions*** are hash functions that are made specifically for cryptography.
 
-*Password Hashing* is the process for producing a hash value for a password to add extra security.
+***Password Hashing*** is the process for producing a hash value for a password to add extra security.

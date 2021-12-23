@@ -1,12 +1,13 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: TEMPLATES
+---
+title: '***Data Structures***: Templates'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
-
-# ***Data Structures***: Templates
 Functions can be built with different data types to accomplish similar goals.  This overloading of data type makes multiple long functions with very repetitive code.
 ```c++
 int TripleMinInt(int item1, int item2, int item3) {
@@ -32,7 +33,7 @@ char TripleMinChar(char item1, char item2, char item3) {
 }
 ```
 
-A *function template* is a function definition that has a special typename as another variable.  It is given a typename and can be used as any other datatype.
+A ***function template*** is a function definition that has a special typename as another variable.  It is given a typename and can be used as any other datatype.
 ```c++
 template <typename T>
 T TripleMin(T item1, T item2, T item3) {
@@ -48,7 +49,7 @@ T TripleMin(T item1, T item2, T item3) {
 ```
 
 ## Template Classes
-*Class templates* uses type parameters in the entire class in place of datatypes.
+***Class templates*** uses type parameters in the entire class in place of datatypes.
 ```c++
 template <typename T>
 class Triplet {
@@ -66,7 +67,7 @@ class Triplet {
 };
 
 template <typename T>
-Triplet<T>:Triplet(T val1, T val2, T val3) {
+Triplet<T>::Triplet(T val1, T val2, T val3) {
 	item1 = val1;
 	item2 = val2;
 	item3 = val3;
@@ -77,4 +78,4 @@ int main() {
 }
 ```	
 
-In this case, the *template* parameter is used in place of any type.
+In this case, the ***template*** parameter is used in place of any type.

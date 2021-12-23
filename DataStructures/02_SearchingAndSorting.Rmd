@@ -1,13 +1,15 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: SEARCHING AND SORTING
+---
+title: '***Data Structures***: Searching and Sorting'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
-
-# ***Data Structures***: Searching and Sorting
-*Linear Searching* is the process of starting from the beginning, searching every element in the container until the desired item is found.
+## Searching Methods
+***Linear Searching*** is the process of starting from the beginning, searching every element in the container until the desired item is found.
 ```c++
 int LinearSearch(const int[] &numbers, const int &numberSize, const int &key) {
 	for (int i = 0; i < numbersSize; ++i) {
@@ -21,7 +23,7 @@ int LinearSearch(const int[] &numbers, const int &numberSize, const int &key) {
 }
 ```
 
-*Binary Search* is the process of checking the middle item of a **sorted** array; if the item is less, go to left half and search again, else, go to right half and search again.
+***Binary Search*** is the process of checking the middle item of a **sorted** array; if the item is less, go to left half and search again, else, go to right half and search again.
 ```c++
 int BinarySearch(const int[] &numbers, const int &numberSize, const int &key) {
 	int mid = 0;
@@ -49,23 +51,25 @@ int BinarySearch(const int[] &numbers, const int &numberSize, const int &key) {
 ```
 
 ## Time Complexity
-A *constant time operation* is defined as an operation that takes the same time to complete regardless of input values and size.
+A ***constant time operation*** is defined as an operation that takes the same time to complete regardless of input values and size.
 
-*Asymptotic Notation* is the classification of runtime complexity.
-- `O(n)` is the algorithmic upper-bound. For all `n >= 1`, `T(n) <= c * f(n)`.
-- `Omega(n)` is the algorithmic lower-bound. For all `n >= 1`, `T(n) >= c * f(n)`.
-- `Theta(n)` is the algorithmic tight-bound. For all `n >= 1`, `T(n) = O(f(n)) = Omega(f(n))`.
+***Asymptotic Notation*** is the classification of run time complexity.
 
-*Big-Oh Notation* is how a function behaves in reaction to input size.
-- Every loop that goes through an entire list has complexity `n`.
+- $O(n)$ is the algorithmic upper-bound. For all $n \geq 1$, $T(n) \leq c \cdot f(n)$.
+- $\Omega(n)$ is the algorithmic lower-bound. For all $n \geq 1$, $T(n) \geq c \cdot f(n)$.
+- $\Theta(n)$ is the algorithmic tight-bound. For all $n \geq 1$, $T(n) = O(f(n)) = \Omega(f(n))$.
+
+***Big-Oh Notation*** is how a function behaves in reaction to input size.
+
+- Every loop that goes through an entire list has complexity $n$.
 - Nested loops are multiplied.
-- Typically, if the condition of a loop changes every iteration, the complexity is `log(n)`.
-- Loops with constant bounds run in constant `O(1)` time.
+- Typically, if the condition of a loop changes every iteration, the complexity is $\log(n)$.
+- Loops with constant bounds run in constant $O(1)$ time.
 
 ## Sorting
-*Sorting* is the process of convering a list into ascending or descending order.
+***Sorting*** is the process of converting a list into ascending or descending order.
 
-*Selection Sort* moves unsorted elements to the sorted section.
+***Selection Sort*** moves unsorted elements to the sorted section.
 ```c++
 void SelectionSort(int[] &numbers, const int &numbersSize) {
 	int i = 0;
@@ -90,7 +94,7 @@ void SelectionSort(int[] &numbers, const int &numbersSize) {
 }
 ```
 
-*Insertion Sort* moves unsorted elements into their right spot.
+***Insertion Sort*** moves unsorted elements into their right spot.
 ```c++
 void InsertionSort(int[] &numbers, const int &numbersSize) {
    int i = 0;

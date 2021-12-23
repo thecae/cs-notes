@@ -1,32 +1,36 @@
-<!---
-CS NOTES :: DATA STRUCTURES :: BALANCED TREES
+---
+title: '***Data Structures***: Balanced Trees'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 16 DEC 2021
--->
+## Balanced Trees
+Balanced Trees, otherwise known as ***AVL Trees***, are binary search trees with a height balance property and contain specific operations to rebalance the tree when nodes are inserted or removed.
 
-# ***Data Structures***: Balanced Trees
-Balanced Trees, otherwise known as *AVL Trees*, are binary search trees with a height balance property and contain specific operations to rebalance the tree when nodes are inserted or removed.
+An AVL tree is ***height balanced*** if for any node, the heights of the nodes left and right subtrees has a magnitude no greater than one.
 
-An AVL tree is *height balanced* if for any node, the heights of the nodes left and right subtrees has a magnitude no greater than one.
-
-The *balance factor* of a node in an AVL tree is the height of the left subtree minus the height of the right subtree.  For a proper AVL tree, no node should have a balance factor outside of -1, 0, or 1.
+The ***balance factor*** of a node in an AVL tree is the height of the left subtree minus the height of the right subtree.  For a proper AVL tree, no node should have a balance factor outside of $-1$, $0$, or $1$.
 
 To find an imbalanced AVL tree, look out for *two left nodes and no right node*.
 
-In the absolute case, the AVL tree's height is no greater than 1.5 times the minimum binary tree height.  For example, for seven nodes, the max height is `1.5*floor(log2(7))=3`.
+In the absolute case, the AVL tree's height is no greater than 1.5 times the minimum binary tree height.  For example, for seven nodes, the max height is $1.5\cdot\left\lfloor{\log_2(7)}\right\rfloor=3$.
 
 ## AVL Tree Rotation
-A *rotation* is a local rearrangement to maintain height balance and BST ordering at the same time.  There are two types of single rotations:
-- *Left rotation*: Moves down left subtree to become the new left child
-- *Right rotation*: Moves down right subtree to become the new right child
+A ***rotation*** is a local rearrangement to maintain height balance and BST ordering at the same time.  There are two types of single rotations:
 
-Below is an example of a rght rotation, needed because `D` is imbalanced.
+- ***Left rotation***: Moves down left subtree to become the new left child
+- ***Right rotation***: Moves down right subtree to become the new right child
 
-![AVL TREE REBALANCE](https://cdn.discordapp.com/attachments/747649164116099082/920820032727031878/unknown.png)
+Below is an example of a right rotation, needed because `D` is imbalanced.
+
+![](https://cdn.discordapp.com/attachments/747649164116099082/920820032727031878/unknown.png)
 
 There are four algorithms that support AVL rotation:
+
 - The `AVLTreeUpdateHeight` algorithm updates a node's height value by taking the maximum of the child subtree heights and adding 1.
 - The `AVLTreeSetChild` algorithm sets a node as the parent's left or right child, updates the child's parent pointer, and updates the parent node's height.
 - The `AVLTreeReplaceChild` algorithm replaces one of a node's existing child pointers with a new value, utilizing AVLTreeSetChild to perform the replacement.
@@ -127,11 +131,11 @@ AVLTreeRebalance(tree, node) {
 ```
 
 ## AVL Tree Insertion
-*Inserting* an iterm into an AVL tree can cause trees to imbalance.  This creates the need for *double rotations*, of which there are four:
-- *(Left, Left) Rotations*: When inserting a smaller item to the left of a left subnode, this causes a two-long strand to the left side of the root. This must be rotated **once right**.
-- *(Left, Right) Rotations*: When inserting a bigger item than the left subnode but smaller than the root, this creates a less-than shape.  This must be **kneaded through the middle**.
-- *(Right, Left) Rotations*: When inserting a bigger item than the root but smaller than the right subnode, this creates a greater-than shape.  This must be **kneaded through the middle**. 
-- *(Right, Right) Rotations*: When inserting a larger item to the right of a right subnode, this casuses a two-long strand to the right side of the root.  This must be rotated **once left**.
+***Inserting*** an item into an AVL tree can cause trees to imbalance.  This creates the need for ***double rotations***, of which there are four:
+- ***(Left, Left) Rotations***: When inserting a smaller item to the left of a left subnode, this causes a two-long strand to the left side of the root. This must be rotated **once right**.
+- ***(Left, Right) Rotations***: When inserting a bigger item than the left subnode but smaller than the root, this creates a less-than shape.  This must be **kneaded through the middle**.
+- ***(Right, Left) Rotations***: When inserting a bigger item than the root but smaller than the right subnode, this creates a greater-than shape.  This must be **kneaded through the middle**. 
+- ***(Right, Right) Rotations***: When inserting a larger item to the right of a right subnode, this causes a two-long strand to the right side of the root.  This must be rotated **once left**.
 
 Below are depictions of each of the rotations.
 ![Double Rotations](https://cdn.discordapp.com/attachments/747649164116099082/920821498250412073/unknown.png)
@@ -178,7 +182,7 @@ AVLTreeInsert(tree, node) {
 ```
 
 ## AVL Tree Removal
-Given a key, an AVL tree *remove* operation removes the first-found matching node, restructuring the tree to preserve all AVL tree requirements. Removal begins by removing the node using the standard BST removal algorithm. After removing a node, all ancestors of the removed node, from the nodes' parent up to the root, are rebalanced. A node is rebalanced by first computing the node's balance factor, then performing rotations if the balance factor is 2 or -2.
+Given a key, an AVL tree ***remove*** operation removes the first-found matching node, restructuring the tree to preserve all AVL tree requirements. Removal begins by removing the node using the standard BST removal algorithm. After removing a node, all ancestors of the removed node, from the nodes' parent up to the root, are rebalanced. A node is rebalanced by first computing the node's balance factor, then performing rotations if the balance factor is 2 or -2.
 
 Below is the Algorithm for AVL Tree Removal.
 ```c++
