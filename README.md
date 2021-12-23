@@ -7,7 +7,7 @@ The notes are organized into various subjects that I have started working on.  S
 Some of the larger subjects depend on the knowledge and basis of a programming languages.  For example, *data structures* is written entirely in C++.
 
 Below is a hierarchial list of the subjects covered:
-* Algorithms (*in progress*)
+* Algorithms
 * Artifical Intelligence (*not started*)
 * Computer Architecture (*in progress*)
 * Data Structures
