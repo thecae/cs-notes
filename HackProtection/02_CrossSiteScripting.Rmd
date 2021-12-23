@@ -1,5 +1,14 @@
-# ***Hack Protection***: Cross-Site Scripting
-*Cross-site scripting (XSS)* is one of the most common methods hackers use to attack websites. XSS vulnerabilities permit a malicious user to execute arbitrary chunks of JavaScript when other users visit your site.
+---
+title: '***Hack Protection***: Cross-Site Scripting'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+***Cross-site scripting (XSS)*** is one of the most common methods hackers use to attack websites. XSS vulnerabilities permit a malicious user to execute arbitrary chunks of JavaScript when other users visit your site.
 
 ## Example
 On a forum page where users are permitted to type and post text -

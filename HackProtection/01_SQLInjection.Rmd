@@ -1,4 +1,13 @@
-# ***Hack Protection***: SQL Injections
+---
+title: '***Hack Protection***: SQL Injection'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 *SQL injection* is a type of injection attack. Injection attacks occur when maliciously crafted inputs are submitted by an attacker, causing an application to perform an unintended action. Because of the ubiquity of SQL databases, SQL injection is one of the most common types of attack on the internet.
 
 ## Risks
@@ -99,6 +108,7 @@ end
 Sanitizing inputs is a good practice for all applications. The user may supply a password as `'` or `1=1--` as a classic injection technique, which looks pretty suspicious as a password choice.
 
 Developers should always make an effort to reject inputs that look suspicious out of hand, while taking care not to accidentally punish legitimate users. For instance, your application may clean parameters supplied in GET and POST requests in the following ways:
+
 - Check that supplied fields like email addresses match a regular expression.
 - Ensure that numeric or alphanumeric fields do not contain symbol characters.
 - Reject (or strip) out whitespace and new line characters where they are not appropriate.
@@ -138,5 +148,3 @@ Our example hack relied on the fact that the password was stored as plain-text i
 
 ## Third Party Authentication
 It is often worth considering out-sourcing the authentication workflow of your application entirely. Facebook, Twitter, and Google all provide mature OAuth APIs, which can be used to let users log into your website using their existing accounts on those systems. This saves you as an application developer from rolling your own authentication, and assures your users that their passwords are only stored in a single location.
-
-#### Notes modified from Hacksplaining.
