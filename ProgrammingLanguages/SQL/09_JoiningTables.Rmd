@@ -1,4 +1,13 @@
-# ***SQL***: Joining Tables
+---
+title: '***SQL***: Joining Tables'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 One of SQL’s most powerful features is the capability to join tables on-the-fly within data retrieval queries. Joins are one of the most important operations that you can perform using SQL `SELECT`, and a good understanding of joins and join syntax is an extremely important part of learning SQL.
 
 Before you can effectively use joins, you must understand relational tables and the basics of relational database design. What follows is by no means complete coverage of the subject, but it should be enough to get you up and running.
@@ -6,6 +15,7 @@ Before you can effectively use joins, you must understand relational tables and 
 The best way to understand relational tables is to look at a real-world example, one based on the data you’ve used in the lessons thus far.
 
 Suppose you had a database table containing a product list, with each product in its own row. The kind of information you would store with each product would include a description and price, along with vendor information about the company that creates the product. Now suppose that you had multiple products created by the same vendor. Where would you store the vendor information (things like vendor name, address, and contact information)? You wouldn’t want to store that data along with the products for several reasons:
+
 - Because the vendor information is the same for each product that vendor produces, repeating the information for each product is a waste of time and storage space.
 - If vendor information changes (for example, if the vendor moves or the contact info changes), you would need to update every occurrence of the vendor information.
 - When data is repeated (that is, the vendor information is used with each product), there is a high likelihood that the data will not be entered identically each time. Inconsistent data is extremely difficult to use in reporting.
@@ -15,6 +25,7 @@ The key here is that having multiple occurrences of the same data is never a goo
 In our example, you can create two tables—one for vendor information and one for product information. The *Vendors* table contains all the vendor information, one table row per vendor, along with a unique identifier for each vendor. This value, called a primary key, can be a vendor ID or any other unique value. The *Products* table stores only product information and no vendor-specific information other than the vendor ID (the *Vendors* table’s primary key). This key relates the *Vendors* table to the *Products* table, and using this vendor ID enables you to use the Vendors table to find the details about the appropriate vendor.
 
 What does this do for you? Well, consider the following:
+
 - Vendor information is never repeated, and so time and space are not wasted.
 - If vendor information changes, you can update a single record, the one in the *Vendors* table. Data in related tables does not change.
 - Because no data is repeated, the data used is obviously consistent, making data reporting and manipulation much simpler.
@@ -119,6 +130,7 @@ FROM Vendors
 ORDER BY vend_name;
 ```
 In addition to using aliases for column names and calculated fields, SQL also enables you to alias table names. There are two primary reasons to do this:
+
 - To shorten the SQL syntax
 - To enable multiple uses of the same table within a single `SELECT` statement
 
@@ -169,6 +181,7 @@ explicitly listed so that no duplicate columns are retrieved.
 
 ## Outer Joins
 Most joins relate rows in one table with rows in another. But occasionally, you want to include rows that have no related rows. For example, you might use joins to accomplish the following tasks:
+
 - Count how many orders were placed by each customer, including customers that have yet to place an order.
 - List all products with order quantities, including products not ordered by anyone.
 - Calculate average sale sizes, taking into account customers that have not yet placed an order.
@@ -214,6 +227,7 @@ These aggregate functions work just the same with the other types of join functi
 
 ## Using Joins and Join Conditions
 Be careful of the following:
+
 - Pay careful attention to the type of join being used. More often than not, you’ll want an inner join, but there are often valid uses for outer joins too.
 - Check your DBMS documentation for the exact join syntax it supports. (Most DBMSs use one of the forms of syntax described in these two lessons.)
 - Make sure you use the correct join condition (regardless of the syntax being used), or you’ll return incorrect data.

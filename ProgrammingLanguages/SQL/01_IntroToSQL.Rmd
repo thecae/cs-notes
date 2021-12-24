@@ -1,7 +1,17 @@
-# ***SQL***: An Introduction to SQL
+---
+title: '***SQL***: Intro to SQL'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 **S**tructured **Q**uery **L**anguage is a programming language dedicated to managing relational databases.  It operates through declarative statements that build the table, update the table, and maintains integrity regardless of size.
 
 Components of a Statement in SQL:
+
 - *Clause*: Clauses perform specific tasks in SQL. By convention, clauses are written in capital letters. Clauses can also be referred to as commands.
 - *Name*: Refers to the name of the table that the command is applied to.
 - *Parameter*: A parameter is a list of columns, data types, or values that are passed to a clause as an argument. Here, the parameter is a list of column names and the associated data type.
@@ -16,6 +26,7 @@ A *table* is a collection of data organized into rows and columns. Tables are so
 A *column* is a set of data values of a particular type. Here, `id`, `name`, and `age` are the columns. 
 
 A row is a single record in a table. The first row in the `celebs` table has:
+
 - An `id` of 1
 - A `name` of Justin Bieber
 - An `age` of 22

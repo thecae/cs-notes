@@ -1,5 +1,15 @@
-# ***SQL***: Summarizing Data
+---
+title: '***SQL***: Summarizing Data'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 It is often necessary to summarize data without actually retrieving it all, and SQL provides special functions for this purpose. Using these functions, SQL queries are often used to retrieve data for analysis and reporting purposes. Examples of this type of retrieval are
+
 - Determining the number of rows in a table (or the number of rows that meet some condition or contain a specific value)
 - Obtaining the sum of a set of rows in a table
 - Finding the highest, lowest, and average values in a table column (either for all rows or for specific rows)
@@ -32,6 +42,7 @@ FROM products WHERE vend_id = 'DLL01';
 ## The `COUNT()` Function
 `COUNT()` does just that—it counts. Using `COUNT()`, you can determine the number of
 rows in a table or the number of rows that match a specific criterion. `COUNT()` can be used two ways:
+
 - Use `COUNT(*)` to count the number of rows in a table, whether columns contain values or NULL values.
 - Use `COUNT(column)` to count the number of rows that have values in a specific column, ignoring NULL values.
 
@@ -82,6 +93,7 @@ FROM OrderItems WHERE order_num = 20005;
 
 ## Aggregates on Distinct Values
 The five aggregate functions can all be used in two ways:
+
 - To perform calculations on all rows, specify the `ALL` argument or specify no argument at all (because `ALL` is the default behavior).
 - To include only unique values, specify the `DISTINCT` argument.
 
@@ -120,7 +132,7 @@ FROM products
 GROUP BY vend_id;
 ```
 Output:
-```blank
+```
 vend_id num_prods
 ------- ---------
 BRS01   3
@@ -132,6 +144,7 @@ The above `SELECT` statement specifies two columns, `vend_id`, which contains th
 Because you used `GROUP BY`, you did not have to specify each group to be evaluated and calculated. That was done automatically. The `GROUP BY` clause instructs the DBMS to group the data and then perform the aggregate on each group rather than on the entire result set.
      
 Before you use `GROUP BY`, here are some important rules about its use that you need to know:
+
 `GROUP BY` clauses can contain as many columns as you want. This enables you to nest groups, providing you with more granular control over how data is grouped.
 - If you have nested groups in your `GROUP BY` clause, data is summarized at the last specified group. In other words, all the columns specified are evaluated together when grouping is established (so you won’t get data back for each individual column level).
 - Every column listed in `GROUP BY` must be a retrieved column or a valid expression (but not an aggregate function). If an expression is used in the `SELECT`, that same expression must be specified in `GROUP BY`. Aliases cannot be used.

@@ -1,4 +1,13 @@
-# ***SQL***: Sorting Retrieved Data
+---
+title: '***SQL***: Sorting Retrieved Data'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 As you learned in the last lesson, the following SQL statement returns a single column from a database table. But look at the output. The data appears to be displayed in no particular order at all.
 ```sql
 SELECT prod_name
@@ -43,7 +52,7 @@ Raggedy Ann
 ```
 This statement is identical to the earlier statement, except it also specifies an ORDER BY clause instructing the DBMS software to sort the data by the prod_name column.
 
-*Caution: When specifying an `ORDER BY` clause, be sure that it is the last clause in your `SELECT` statement. If it is not the last clause, an error will be generated.*
+***Caution**: When specifying an `ORDER BY` clause, be sure that it is the last clause in your `SELECT` statement. If it is not the last clause, an error will be generated.*
 
 ## Sorting by Multiple Columns
 To sort by multiple columns, simply specify the column names separated by commas (just as you do when you are selecting multiple columns).

@@ -1,4 +1,13 @@
-# ***SQL***: Data Manipulation Functions
+---
+title: '***SQL***: Manipulation Functions'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 Like almost any other computer language, SQL supports the use of functions to manipulate data. Functions are operations that are usually performed on data, usually to facilitate conversion and manipulation, and they are an important part of your SQL toolbox.  Functions, however, can be highly problematic.
 
 Unlike SQL statements (for example, `SELECT`), which for the most part are supported by all DBMSs equally, functions tend to be very DBMS specific. In fact, very few functions are supported identically by all major DBMSs. Although all types of functionality are usually available in each DBMS, the function names or syntax can differ greatly.
@@ -10,6 +19,7 @@ Unlike SQL statements (for example, `SELECT`), which for the most part are suppo
 | Current Date | MySQL: `CURDATE`; Oracle: `SYSDATE`; SQL Server: `GETDATE`; SQLite: `DATE` |
 
 Most SQL implementations support the following types of functions:
+
 - Text functions are used to manipulate strings of text (for example, trimming or padding values and converting values to upper- and lowercase).
 - Numeric functions are used to perform mathematical operations on numeric data (for example, returning absolute numbers and performing algebraic calculations).
 - Date and time functions are used to manipulate date and time values and to extract specific components from these values (for example, returning differences between dates and checking date validity).

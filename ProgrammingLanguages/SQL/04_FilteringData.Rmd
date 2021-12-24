@@ -1,4 +1,13 @@
-# ***SQL***: Filtering Data
+---
+title: '***SQL***: Filtering Data'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 Database tables usually contain large amounts of data, and you seldom need to retrieve all the rows in a table. More often than not you’ll want to extract a subset of the table’s data as needed for specific operations or reports. Retrieving just the data you want involves specifying *search criteria*, also known as a *filter condition*.
 
 ## The `WHERE` Clause
@@ -88,6 +97,7 @@ FROM products WHERE vend_id IN ('DLL01','BRS01')
 ORDER BY prod_name;
 ```
 The `SELECT` statement retrieves all products made by vendor DLL01 and vendor BRS01. The `IN` operator is followed by a comma-delimited list of valid values, and the entire list must be enclosed within parentheses.
+
 - When you are working with long lists of valid options, the `IN` operator syntax is far cleaner and easier to read.
 - The order of evaluation is easier to manage when `IN` is used in conjunction with other `AND` and `OR` operators.
 - `IN` operators almost always execute more quickly than lists of `OR` operators (although you’ll not see any performance difference with very short lists like the ones we’re using here).

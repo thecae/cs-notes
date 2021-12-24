@@ -1,5 +1,15 @@
-# ***SQL***: Creating Calculated Fields
+---
+title: '***SQL***: Creating Calculated Fields'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 Data stored within a database’s tables is often not available in the exact format needed by your applications. Here are some examples:
+
 - You need to display a field containing the name of a company along with the company’s location, but that information is stored in separate table columns.
 - City, state, and ZIP codes are stored in separate columns (as they should be), but your mailing label printing program needs them retrieved as one correctly formatted field.
 - Column data is in mixed upper- and lowercase, and your report needs all data presented in uppercase.
