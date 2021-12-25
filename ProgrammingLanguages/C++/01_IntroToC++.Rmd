@@ -1,9 +1,19 @@
-# ***C++***: An Introduction to C++
+---
+title: '***C++***: Intro to C++'
+author: "Cole Ellis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 
 A program is a set of instructions that are executed one at a time.  There are three parts to a function:
-- *Input*: Getting data from user (file, keyboard, etc.)
-- *Process*: Performing computations on data
-- *Output*: Puts data somewhere (file, screen, etc.)
+
+- ***Input***: Getting data from user (file, keyboard, etc.)
+- ***Process***: Performing computations on data
+- ***Output***: Puts data somewhere (file, screen, etc.)
 
 ## Basic Program Formatting
 Programs are formatted with a main function that has a return value to indicate to the user that the function executed properly.  Include statements are written above all functions and global variables written below.
@@ -39,7 +49,7 @@ std::cout << "There are " << inchesPerFoot << " inches per foot." << std::endl;
 ```
 
 ## Variables
-*Variables* are named objects to store data.  They are connected to a data type that cannot be changed after declaration.  Variables, however, can be static-casted.
+***Variables*** are named objects to store data.  They are connected to a data type that cannot be changed after declaration.  Variables, however, can be static-casted.
 ```c++
 int myVal = 5;
 ```
@@ -64,15 +74,15 @@ void printMap(std::ofstream &outfile, const FamilyNameMap &myMap, size_t largest
 ```
 Note that the asterisks in between are optional but helpful for making each line start at the same spot for formatting purposes. 
 
-For the most part, *whitespace* (spaces, tabs, newlines) is also ignored by the compiler. 
+For the most part, ***whitespace*** (spaces, tabs, newlines) is also ignored by the compiler. 
 
 ## Errors and Warnings
 Errors in C++ are very similar to most other languages.
 
-*SyntaxError*: Violating language rules on how functions and symbols work.
+***SyntaxError***: Violating language rules on how functions and symbols work.
 
 Unclear Error Message: The compiler making its best guess as to the error made and how to fix it
 
-*LogicError* (Bugs): Errors during program running
+***LogicError*** (Bugs): Errors during program running
 
-*Warnings*: Compiler message indicating possible logic error but still lets the program run.
+***Warnings***: Compiler message indicating possible logic error but still lets the program run.

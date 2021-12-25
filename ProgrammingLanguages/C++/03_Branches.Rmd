@@ -1,16 +1,17 @@
-<!---
-CS NOTES :: C++ :: BRANCHES
+---
+title: '***C++*** Branches'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 17 DEC 2021
--->
-
-# ***C++***: Branches
-A *branch* is a set of code only executed under certain conditions.
+A ***branch*** is a set of code only executed under certain conditions.
 
 ## If Branch
-An *if branch* is a branch that only passes if a condition is true.
+An ***if branch*** is a branch that only passes if a condition is true.
 ```c++
 if (2 == 2) {
 	// this code executes
@@ -22,7 +23,7 @@ if (2 == 3) {
 ```
 
 ## If-Else Branch
-An *if-else branch* is an if branch that contains alternative instructions in case the condition fails.
+An ***if-else branch*** is an if branch that contains alternative instructions in case the condition fails.
 ```c++
 if (2 == 2) {
 	// this code executes
@@ -37,10 +38,10 @@ if (2 == 3) {
 }
 ```
 
-As seen here, the *equality operator (`==`)* is used to determine equality.  The *inequality operator (`!=`) returns true if the two objects are not the same.
+As seen here, the ***equality operator (`==`)*** is used to determine equality.  The ***inequality operator (`!=`)*** returns true if the two objects are not the same.
 
 ## Else-If Branch
-An *else-if branch* has multiple possible conditions.
+An ***else-if branch*** has multiple possible conditions.
 ```c++
 if ( /* expression 1 */ ) {
 	// executed if expression 1 is true
@@ -52,12 +53,13 @@ if ( /* expression 1 */ ) {
 ```
 
 ## Logical Operators
-A *logical operator* treats operators as true or false, and results in a true or false.
+A ***logical operator*** treats operators as true or false, and results in a true or false.
 - `&&`: AND
 - `||`: OR
 - `!`: NOT
 
 Logical operators belong in the order of operations and will be the last thing to be executed other than the logical not.
+
 1. Parentheses `()`
 2. Logical Not `!`
 3. Arithmetic Operators `* / + -`
@@ -67,9 +69,9 @@ Logical operators belong in the order of operations and will be the last thing t
 7. Logical Or `||`
 
 ## Switch Statements
-A *switch statement* represents multi-branch behavior; a better way to use else-if branches if they all refer to the same variable or expression.
-- *Case*: The case is the expressio checked
-- *The default case*: The case executed when no case matches
+A ***switch statement*** represents multi-branch behavior; a better way to use else-if branches if they all refer to the same variable or expression.
+- ***Case***: The case is the expressio checked
+- ***The default case***: The case executed when no case matches
 ```c++
 switch ( /* expression */ ) {
 	case ( /* constant expression 1 */ ):
@@ -104,9 +106,9 @@ switch (month) {
 }
 ```
 
-A *boolean* is a quantitity that can be either true or false.  The typename is `bool`.
+A ***boolean*** is a quantitity that can be either true or false.  The typename is `bool`.
 
-The *ternary operator* are three operations that stand together to build a one-line conditional statement.
+The ***ternary operator*** are three operations that stand together to build a one-line conditional statement.
 ```c++
 ( /* condition */ ) ? /* value if true */ : /* value if false */;
 ```

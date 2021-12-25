@@ -1,17 +1,18 @@
-<!---
-CS NOTES :: C++ :: EXCEPTIONS
+---
+title: '***C++***: Exceptions'
+author: "Cole Ellis"
+output: html_document
+---
 
-BY: COLE ELLIS
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-LAST MODIFIED: 17 DEC 2021
--->
+***Error-checking code*** is code a programmer writes to detect and handle errors that occur during program execution. 
 
-# ***C++***: Exceptions
-*Error-checking code* is code a programmer writes to detect and handle errors that occur during program execution. 
+An ***exception*** is a circumstance that a program was not designed to handle, such as if the user enters a negative height.
 
-An *exception* is a circumstance that a program was not designed to handle, such as if the user enters a negative height.
-
-C++ has special constructs, `try`, `throw`, and `catch`, known as *exception-handling constructs*, to keep error-checking code separate and to reduce redundant checks.
+C++ has special constructs, `try`, `throw`, and `catch`, known as ***exception-handling constructs***, to keep error-checking code separate and to reduce redundant checks.
 ```c++
 // ... normal code
 
@@ -30,6 +31,7 @@ try {
 ```
 
 The exception-handling construct has three main parts:
+
 - A `try` block block surrounds normal code, which is exited immediately if a throw statement executes.
 - A `throw` statement statement appears within a try block; if reached, execution jumps immediately to the end of the try block. The code is written so only error situations lead to reaching a throw.
 - A `catch` clause clause immediately follows a try block; if the catch was reached due to an exception thrown of the catch clause's parameter type, the clause executes. The clause is said to catch the thrown exception.
