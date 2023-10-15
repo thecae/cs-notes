@@ -7,21 +7,21 @@ The notes are organized into various subjects that I have started working on.  S
 Some of the larger subjects depend on the knowledge and basis of a programming languages.  For example, *data structures* is written entirely in C++.
 
 Below is a hierarchial list of the subjects covered:
-* Algorithms
-* Artifical Intelligence (*not started*)
-* Computer Architecture (*in progress*)
-* Data Structures
-* Machine Learning (*not started*)
-* Networking (*not started*)
-* Neural Networks (*not started*)
-* Operating Systems (*not started*)
+* [Algorithms](/Algorithms/README.md)
+<!-- * [Artifical Intelligence (*not started*) -->
+<!-- * Computer Architecture (*in progress*) -->
+* [Data Structures](/DataStructures/README.md)
+<!-- * Machine Learning (*not started*) -->
+<!-- * Networking (*not started*) -->
+<!-- * Neural Networks (*not started*) -->
+<!-- * Operating Systems (*not started*) -->
 * Programming Languages
-	* C# (*not started*)
-	* C++
-	* CSS (*not started*)
-	* HTML (*not started*)
-	* Java (*not started*)
-	* Javascript (*not started*)
-	* Python (*in progress*)
-	* SQL
-	* Swift (*not started*)
+	* [C#](/ProgrammingLanguages/C%23/README.md)
+	* [C++](/ProgrammingLanguages/CPP/README.md)
+	<!-- * CSS (*not started*) -->
+	<!-- * HTML (*not started*) -->
+	<!-- * Java (*not started*) -->
+	<!-- * Javascript (*not started*) -->
+	<!-- * Python (*in progress*) -->
+	* [SQL](/ProgrammingLanguages/SQL/README.md)
+	<!-- * Swift (*not started*) -->
