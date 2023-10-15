@@ -65,15 +65,15 @@ C# is a ***strongly-typed*** language, meaning that every data type of every var
 
 | Type | Description | Size (bits) | .NET type | Range |
 |------|-------------|-------------|-----------|-------|
-| `int` | Whole numbers | $4$ | `System.Int32` | $[-2,147,483,648, \,\,2,147,483,648]$
-| `long` | Whole numbers (more range) | $8$ | `System.Int64` | $[-9,223,372,036,854,775,808,\,\, 9,223,372,036,854,775,807]$
-| `float` | Floating-point numbers | $4$ | `System.Single` | $[-3.4\times 10^{38},\,\, 3.4\times 10^{38}]$
-| `double` | Double precision FP | $8$ | `System.Double` | $[-1.7\times 10^{308},\,\, 1.7\times 10^{308}]$
-| `decimal` | Monetary values | $16$ | `System.Decimal` | $28$ sig figs
-| `char` | Single character | $2$ | `System.Char` | N/A
-| `bool` | Boolean | $1$ | `System.Boolean` | `True` or `False`
-| `DateTime` | Moments in time | $8$ | `System.DateTime` | $[0:0:00 \,\,01/01/0001,\,\, 23:59:59 \,\,12/31/9999]$
-| `string` | Sequence of characters | $2$/char | `System.String` | N/A
+| `int` | Whole numbers | $$4$$ | `System.Int32` | $$[-2,147,483,648, \,\,2,147,483,648]$$
+| `long` | Whole numbers (more range) | $$8$$ | `System.Int64` | $$[-9,223,372,036,854,775,808,\,\, 9,223,372,036,854,775,807]$$
+| `float` | Floating-point numbers | $$4$$ | `System.Single` | $$[-3.4\times 10^{38},\,\, 3.4\times 10^{38}]$$
+| `double` | Double precision FP | $$8$$ | `System.Double` | $$[-1.7\times 10^{308},\,\, 1.7\times 10^{308}]$$
+| `decimal` | Monetary values | $$16$$ | `System.Decimal` | $$28$$ sig figs
+| `char` | Single character | $$2$$ | `System.Char` | N/A
+| `bool` | Boolean | $$1$$ | `System.Boolean` | `True` or `False`
+| `DateTime` | Moments in time | $$8$$ | `System.DateTime` | $$[0:0:00 \,\,01/01/0001,\,\, 23:59:59 \,\,12/31/9999]$$
+| `string` | Sequence of characters | $$2$$/char | `System.String` | N/A
 
 Assigning the variables in C# is the same as every other strongly-typed language.
 

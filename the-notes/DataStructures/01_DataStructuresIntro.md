@@ -34,9 +34,9 @@ A ***computational problem*** is a problem that specifies input, questions about
 ## Efficiency
 ***Algorithm efficiency*** is a measure of the amount of resources used by the algorithm.
 
-***Runtime complexity*** is a function representing the number of constant time operations performed on a size $n$ input.
+***Runtime complexity*** is a function representing the number of constant time operations performed on a size $$n$$ input.
 
 - ***Best case***: The algorithm does the least number of operations
 - ***Worst case***: The algorithm does the most number of operations
 
-***Space complexity*** is a measure of fixed-size memory units performed on a size $n$ units.
+***Space complexity*** is a measure of fixed-size memory units performed on a size $$n$$ units.

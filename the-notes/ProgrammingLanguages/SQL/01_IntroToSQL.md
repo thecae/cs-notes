@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 **S**tructured **Q**uery **L**anguage is a programming language dedicated to managing relational databases.  It operates through declarative statements that build the table, update the table, and maintains integrity regardless of size.

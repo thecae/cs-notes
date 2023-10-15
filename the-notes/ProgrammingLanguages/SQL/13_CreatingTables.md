@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 ## Creating Tables
@@ -69,7 +69,7 @@ CREATE TABLE OrderItems
 );
 ```
 
-This statement creates the *OrderItems* table that contains the individual items that make up an order. (The order itself is stored in the Orders table.) The quantity column contains the quantity for each item in an order. In this example, adding the text `DEFAULT 1` to the column description instructs the DBMS to use a quantity of $1$ if no quantity is specified.
+This statement creates the *OrderItems* table that contains the individual items that make up an order. (The order itself is stored in the Orders table.) The quantity column contains the quantity for each item in an order. In this example, adding the text `DEFAULT 1` to the column description instructs the DBMS to use a quantity of $$1$$ if no quantity is specified.
 Default values are often used to store values in date or time stamp columns. For example, the system date can be used as a default date by specifying the function or variable used to refer to the system date. For example, MySQL users may specify `DEFAULT CURRENT_DATE()`, while Oracle users may specify `DEFAULT SYSDATE`, and SQL Server users may specify `DEFAULT GETDATE()`. Unfortunately, the command used to obtain the system date is different in just about every DBMS.
 
 ## Updating Tables

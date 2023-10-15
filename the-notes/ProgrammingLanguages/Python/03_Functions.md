@@ -65,9 +65,9 @@ OUTPUT:
 ```
 
 ## Dynamic Typing
-A programmer can call a user-defined function `add(first, second)` to add two parameters.  In turn, calling `add(5, 7)` would return $12$ while calling `add('Tora', 'Bora')` would concatenate the strings to return `ToraBora`.
+A programmer can call a user-defined function `add(first, second)` to add two parameters.  In turn, calling `add(5, 7)` would return $$12$$ while calling `add('Tora', 'Bora')` would concatenate the strings to return `ToraBora`.
 
-The function's behavior of being able to add together different types is a concept called ***polymorphism***. Polymorphism is an inherent part of the Python language. For example, consider the multiplication operator `*`. If the two operands are numbers, then the result is the product of those two numbers. If one operand is a string and the other an integer (e.g., `'x' * 5`) then the result is a repetition of the string $5$ times: `xxxxx`.
+The function's behavior of being able to add together different types is a concept called ***polymorphism***. Polymorphism is an inherent part of the Python language. For example, consider the multiplication operator `*`. If the two operands are numbers, then the result is the product of those two numbers. If one operand is a string and the other an integer (e.g., `'x' * 5`) then the result is a repetition of the string $$5$$ times: `xxxxx`.
 
 Python uses ***dynamic typing*** to determine the type of objects as a program executes. Ex: The consecutive statements `num = 5` and `num = '7'` first assign with an integer type, and then a string type. The type of num can change, depending on the value it references. The interpreter is responsible for checking that all operations are valid as the program executes. If the function call `add(5, '100')` is evaluated, an error is generated when adding the string to an integer.
 
@@ -91,7 +91,7 @@ A function can only return one item, not two or more (though a list or a tuple w
 
 A return statement may appear at any point in a function, not just as the last statement.  A function may also contain multiple return statements in different locations.
 
-A function call evaluates to its returned value, which often appears within an expression.  For example, `5 + compute_square(4)` returns $5+16=21$.
+A function call evaluates to its returned value, which often appears within an expression.  For example, `5 + compute_square(4)` returns $$5+16=21$$.
 
 A funtion's statements may include function calls, known as ***hierarchical function calls*** or ***nested function calls***.  Code such as `user_input = int(input())` consists of a hierarchical function call, wherein the `input()` function is called and evaluates to a value that is then passed as an argument to the `int()` function.
 

@@ -64,9 +64,9 @@ Precedence rules:
 ## Division and Modulo
 Division returns floating point values regardless of the input data type.
 
-* $20 / 10 = 2.0$
-* $50 / 50 = 1.0$
-* $25 / 50 = 0.5$
+* $$20 / 10 = 2.0$$
+* $$50 / 50 = 1.0$$
+* $$25 / 50 = 0.5$$
 
 The floored division operator (`//`) makes the division and rounds the result down to the nearest integer.  If either operand is a floating-point number, then a float is returned.
 
@@ -77,9 +77,9 @@ The floored division operator (`//`) makes the division and rounds the result do
 
 Modulus returns the remainder of the division of the two integer operands.
 
-* $24 \% 10$ is $4$. *Reason*: $24 / 10$ is $2$ with remainder $4$.
-* $50 \% 50$ is $0$. *Reason*: $50 / 50$ is $1$ with remainder $0$.
-* $1 \% 2$ is $1$. *Reason*: $1 / 2$ is $0$ with remainder $1$.
+* $$24 \% 10$$ is $$4$$. *Reason*: $$24 / 10$$ is $$2$$ with remainder $$4$$.
+* $$50 \% 50$$ is $$0$$. *Reason*: $$50 / 50$$ is $$1$$ with remainder $$0$$.
+* $$1 \% 2$$ is $$1$$. *Reason*: $$1 / 2$$ is $$0$$ with remainder $$1$$.
 
 ## Compound Operators
 Compound operators simplify expressions where a variable is updated by a factor of its current value.
@@ -110,14 +110,14 @@ Common functions in the math module:
 | Function | Definition |
 |----------|------------|
 | `ceil(x)` | Round up value |
-| `factorial(x)` | $x!$ |
-| `fmod(x, y)` | $x % y$ |
-| `fabs(x)` | $|x|$ |
+| `factorial(x)` | $$x!$$ |
+| `fmod(x, y)` | $$x % y$$ |
+| `fabs(x)` | $$|x|$$ |
 | `floor(x)` | Round down value |
 | `fsum(X)` | Sum of a range, list, or array |
-| `exp(x)` | $e^x$ |
-| `log(x, b)` | $\log_b(x)$ |
-| `pow(x, y)` | $x^y$ |
+| `exp(x)` | $$e^x$$ |
+| `log(x, b)` | $$\log_b(x)$$ |
+| `pow(x, y)` | $$x^y$$ |
 | `sqrt(x)` | Square root |
-| `pi` | $\pi$ (constant) |
+| `pi` | $$\pi$$ (constant) |
 | `e` | Euler's constant |

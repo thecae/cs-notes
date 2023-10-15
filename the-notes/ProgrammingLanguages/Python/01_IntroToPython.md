@@ -3,10 +3,10 @@
 A computer program consists of instructions executing one at a time. Basic instruction types are:
 
 * _**Input**_: A program gets data, perhaps from a file, keyboard, touchscreen, network, etc.
-* _**Process**_: A program performs computations on that data, such as adding two values like $x + y$.
+* _**Process**_: A program performs computations on that data, such as adding two values like $$x + y$$.
 * _**Output**_: A program puts that data somewhere, such as to a file, screen, or network.
 
-Programs use variables to refer to data, like $x$, $y$, and $z$.
+Programs use variables to refer to data, like $$x$$, $$y$$, and $$z$$.
 
 **Hello World Program**:
 

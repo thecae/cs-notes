@@ -3,11 +3,11 @@ Balanced Trees, otherwise known as ***AVL Trees***, are binary search trees with
 
 An AVL tree is ***height balanced*** if for any node, the heights of the nodes left and right subtrees has a magnitude no greater than one.
 
-The ***balance factor*** of a node in an AVL tree is the height of the left subtree minus the height of the right subtree.  For a proper AVL tree, no node should have a balance factor outside of $-1$, $0$, or $1$.
+The ***balance factor*** of a node in an AVL tree is the height of the left subtree minus the height of the right subtree.  For a proper AVL tree, no node should have a balance factor outside of $$-1$$, $$0$$, or $$1$$.
 
 To find an imbalanced AVL tree, look out for *two left nodes and no right node*.
 
-In the absolute case, the AVL tree's height is no greater than 1.5 times the minimum binary tree height.  For example, for seven nodes, the max height is $1.5\cdot\left\lfloor{\log_2(7)}\right\rfloor=3$.
+In the absolute case, the AVL tree's height is no greater than 1.5 times the minimum binary tree height.  For example, for seven nodes, the max height is $$1.5\cdot\left\lfloor{\log_2(7)}\right\rfloor=3$$.
 
 ## AVL Tree Rotation
 A ***rotation*** is a local rearrangement to maintain height balance and BST ordering at the same time.  There are two types of single rotations:

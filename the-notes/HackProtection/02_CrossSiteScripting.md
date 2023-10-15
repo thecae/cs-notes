@@ -92,7 +92,7 @@ Insecure (does not escape HTML):
 ```java
 <%= contents %>
 
-${contents}
+$${contents}
 
 <%
    out.println(contents);
@@ -101,7 +101,7 @@ ${contents}
 ```
 Secure (`c:out` safely escapes HTML):
 ```java
-<c:out value="${contents}">
+<c:out value="$${contents}">
 ```
 
 ## HTTP-Only Cookies

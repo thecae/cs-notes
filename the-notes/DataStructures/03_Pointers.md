@@ -29,7 +29,7 @@ int* somePtr = &someInt;
 
 In the case above, `somePtr` holds the memory address of `someInt`.  Printing `somePtr` would return in a hexadecimal memory address rather than `5`.
 
-The pointer operator is also the ***dereference operator***, which returns the value at an address.  This means that printing `*somePtr` would print $5$.
+The pointer operator is also the ***dereference operator***, which returns the value at an address.  This means that printing `*somePtr` would print $$5$$.
 ```c++
 int someInt = 5;
 int *somePtr = &someInt;

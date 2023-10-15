@@ -5,11 +5,11 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 ## Understanding Cursors
-SQL retrieval operations work with sets of rows known as result sets.  The rows returned are all the rows that match a SQL statement - zero or more of them.  When you use simple `SELECT` statements, there is no way to get the first row, the next row, or the previous $10$ rows.  Thsi is an integral part of how a relational DBMS works.
+SQL retrieval operations work with sets of rows known as result sets.  The rows returned are all the rows that match a SQL statement - zero or more of them.  When you use simple `SELECT` statements, there is no way to get the first row, the next row, or the previous $$10$$ rows.  Thsi is an integral part of how a relational DBMS works.
 
 Sometimes you need to step through rows forward or backward and one or more at a time. This is what cursors are used for. A cursor is a database query stored on the DBMS server - not a `SELECT` statement, but the result set retrieved by that statement. Once the cursor is stored, applications can scroll or browse up and down through the data as needed.
 

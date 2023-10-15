@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 Database tables usually contain large amounts of data, and you seldom need to retrieve all the rows in a table. More often than not you’ll want to extract a subset of the table’s data as needed for specific operations or reports. Retrieving just the data you want involves specifying *search criteria*, also known as a *filter condition*.
@@ -45,7 +45,7 @@ FROM products WHERE vend_id <> 'DLL01';
 ```
 
 ## Checking For a Range of Values
-To check for a range of values, you can use the `BETWEEN` operator. Its syntax is a little different from other `WHERE` clause operators because it requires two values: the beginning and end of the range. The `BETWEEN` operator can be used, for example, to check for all products that cost between $5 and $10 or for all dates that fall between specified start and end dates.
+To check for a range of values, you can use the `BETWEEN` operator. Its syntax is a little different from other `WHERE` clause operators because it requires two values: the beginning and end of the range. The `BETWEEN` operator can be used, for example, to check for all products that cost between $$5 and $$10 or for all dates that fall between specified start and end dates.
 ```sql
 SELECT prod_price, prod_name
 FROM products WHERE prod_price BETWEEN 5 AND 10;
@@ -69,7 +69,7 @@ to your `WHERE` clause.
 SELECT prod_id, prod_price, prod_name
 FROM products WHERE vend_id = 'DLL01' AND prod_price <= 4;
 ```
-The above SQL statement retrieves the product name and price for all products made by vendor DLL01 as long as the price is $4 or less. The `WHERE` clause in this `SELECT` statement is made up of two conditions, and the keyword `AND` is used to join them. `AND` instructs the database management system software to return only rows that meet all the conditions specified. If a product is made by vendor DLL01, but it costs more than $4, it is not retrieved. Similarly, products that cost less than $4 that are made by a vendor other than the one specified are not to be retrieved.
+The above SQL statement retrieves the product name and price for all products made by vendor DLL01 as long as the price is $$4 or less. The `WHERE` clause in this `SELECT` statement is made up of two conditions, and the keyword `AND` is used to join them. `AND` instructs the database management system software to return only rows that meet all the conditions specified. If a product is made by vendor DLL01, but it costs more than $$4, it is not retrieved. Similarly, products that cost less than $$4 that are made by a vendor other than the one specified are not to be retrieved.
 
 The `OR` operator is exactly the opposite of `AND`. The `OR` operator instructs the database management system software to retrieve rows that match either condition. In fact, most of the better DBMSs will not even evaluate the second condition in an `OR WHERE` clause if the first condition has already been met. (If the first condition was met, the row would be retrieved regardless of the second condition.)
 ```sql
@@ -78,7 +78,7 @@ FROM products WHERE vend_id = 'DLL01' OR vend_id = 'BRS01';
 ```
 The above SQL statement retrieves the product name and price for any products made by either of the two specified vendors. The `OR` operator tells the DBMS to match either condition, not both. If an `AND` operator were used here, no data would be returned (as it would create a `WHERE` clause that would match no rows). 
 
-`WHERE` clauses can contain any number of `AND` and `OR` operators. Combining the two enables you to perform sophisticated and complex filtering. But combining `AND` and `OR` operators presents an interesting problem. To demonstrate this, look at an example. You need a list of all products costing $10 or more made by vendors DLL01 and BRS01. The following `SELECT` statement uses a combination of `AND` and `OR` operators to build a `WHERE` clause:
+`WHERE` clauses can contain any number of `AND` and `OR` operators. Combining the two enables you to perform sophisticated and complex filtering. But combining `AND` and `OR` operators presents an interesting problem. To demonstrate this, look at an example. You need a list of all products costing $$10 or more made by vendors DLL01 and BRS01. The following `SELECT` statement uses a combination of `AND` and `OR` operators to build a `WHERE` clause:
 ```sql
 SELECT prod_name, prod_price
 FROM products WHERE vend_id = 'DLL01' OR vend_id = 'BRS01' AND prod_price >= 10;

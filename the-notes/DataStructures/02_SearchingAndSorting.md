@@ -45,16 +45,16 @@ A ***constant time operation*** is defined as an operation that takes the same t
 
 ***Asymptotic Notation*** is the classification of run time complexity.
 
-- $O(n)$ is the algorithmic upper-bound. For all $n \geq 1$, $T(n) \leq c \cdot f(n)$.
-- $\Omega(n)$ is the algorithmic lower-bound. For all $n \geq 1$, $T(n) \geq c \cdot f(n)$.
-- $\Theta(n)$ is the algorithmic tight-bound. For all $n \geq 1$, $T(n) = O(f(n)) = \Omega(f(n))$.
+- $$O(n)$$ is the algorithmic upper-bound. For all $$n \geq 1$$, $$T(n) \leq c \cdot f(n)$$.
+- $$\Omega(n)$$ is the algorithmic lower-bound. For all $$n \geq 1$$, $$T(n) \geq c \cdot f(n)$$.
+- $$\Theta(n)$$ is the algorithmic tight-bound. For all $$n \geq 1$$, $$T(n) = O(f(n)) = \Omega(f(n))$$.
 
 ***Big-Oh Notation*** is how a function behaves in reaction to input size.
 
-- Every loop that goes through an entire list has complexity $n$.
+- Every loop that goes through an entire list has complexity $$n$$.
 - Nested loops are multiplied.
-- Typically, if the condition of a loop changes every iteration, the complexity is $\log(n)$.
-- Loops with constant bounds run in constant $O(1)$ time.
+- Typically, if the condition of a loop changes every iteration, the complexity is $$\log(n)$$.
+- Loops with constant bounds run in constant $$O(1)$$ time.
 
 ## Sorting
 ***Sorting*** is the process of converting a list into ascending or descending order.

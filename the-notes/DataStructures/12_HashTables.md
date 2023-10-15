@@ -1,5 +1,5 @@
 # Hash Tables
-A ***hash table*** is a data structure that stores unordered items by mapping each item to an array location.  Hash tables are advantageous because it reduces the time complexity for search, insert, and remove from $O(n)$ to $O(1)$.
+A ***hash table*** is a data structure that stores unordered items by mapping each item to an array location.  Hash tables are advantageous because it reduces the time complexity for search, insert, and remove from $$O(n)$$ to $$O(1)$$.
 
 - ***Key***: The value used to map to an index
 - ***Bucket***: Hash table array element
@@ -145,7 +145,7 @@ HashSearch(key) {
 
 Quadratic probing follows a user-defined iteration function, that which goes through the sequential points to find the next open space.  Quadratic probing also uses the same convention as linear probing when dealing with empty-since-start and empty-after-removal buckets.
 
-The standard equation for quadratic probing is: $(H(key) + c_1(i) + c_2(i^2)) \,\% \, N$, where $i$ is the iterator and $N$ is the table size.
+The standard equation for quadratic probing is: $$(H(key) + c_1(i) + c_2(i^2)) \,\% \, N$$, where $$i$$ is the iterator and $$N$$ is the table size.
 
 ```c++
 // HashInsert using quadratic probing
@@ -225,7 +225,7 @@ HashSearch(item) {
 ## Double Hashing
 ***Double Hashing*** is a collision-resolution technique that uses two different hash functions to compute indices.
 
-The standard probing equation is: $(H_1(key) + H_2(key)) \, % \, N$.
+The standard probing equation is: $$(H_1(key) + H_2(key)) \, % \, N$$.
 
 ## Hash Table Resizing
 To ***resize*** a hash table is to increase the number of buckets, preserving all original elements.  This does not mean, however, that they will be matched with the same index value, but rather all elements of the old table wil be in the new table.
@@ -265,9 +265,9 @@ Hash(key, tableSize) {
 ```
 
 Resizing should be considered when one of the following exceeds a certain threshold:
-- ***Load Factor***: Percentage of filled buckets (typically $> 60\%$)
-- ***Open Addressing Resolution***: Number of collisions per insert (typically $> N/3$)
-- ***Chaining Resolution***: Size of Bucket's Linked List (typically $> 4$)
+- ***Load Factor***: Percentage of filled buckets (typically $$> 60\%$$)
+- ***Open Addressing Resolution***: Number of collisions per insert (typically $$> N/3$$)
+- ***Chaining Resolution***: Size of Bucket's Linked List (typically $$> 4$$)
 
 ## Methods of Hashing
 There are many ways to hash a function, some of them more consistent than others.
@@ -282,7 +282,7 @@ Hash(key, size) {
 }
 ```
 
-***Mid-Square hash functions*** extracts the middle $R$ digits from a number's square and returns $R \, \% \, N$.  This is primarily done bitwise for speed.
+***Mid-Square hash functions*** extracts the middle $$R$$ digits from a number's square and returns $$R \, \% \, N$$.  This is primarily done bitwise for speed.
 ```c++
 // Mid square hash function
 MidSquareHash(key, R, size) {
@@ -296,7 +296,7 @@ MidSquareHash(key, R, size) {
 }
 ```
 
-An easier function to implement is to use a time-based seed function, which relies on similar logic but does all computations in base $10$.
+An easier function to implement is to use a time-based seed function, which relies on similar logic but does all computations in base $$10$$.
 
 ***Multiplicative String hash functions*** repeatedly multiplies hash functions and adds the ASCII value of each string character to the function.
 ```c++

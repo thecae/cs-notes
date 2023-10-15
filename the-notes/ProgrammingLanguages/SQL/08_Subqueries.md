@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 `SELECT` statements are SQL queries. All the `SELECT` statements we have seen thus far are simple queries—single statements retrieving data from individual database tables.  SQL also enables you to create subqueries—queries that are embedded into other queries. Why would you want to do this? The best way to understand this concept is to look at a couple of examples.

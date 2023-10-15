@@ -11,7 +11,7 @@ size_t Factorial(int n) {
 }
 ```
 
-The ***base case*** is the case where the algorithm actually indicates what to do.  In the case above, $n = 1$ is the base case.  A recursive algorithm can have many bases cases, but must have one.  The general best idea is to determine the base case and then write the recursive case. 
+The ***base case*** is the case where the algorithm actually indicates what to do.  In the case above, $$n = 1$$ is the base case.  A recursive algorithm can have many bases cases, but must have one.  The general best idea is to determine the base case and then write the recursive case. 
 
 ## Recursive Searching and Sorting
 ***Binary Search*** is a recursive function that begins at the midpoint of a sorted array and halves the range after each iteration.
@@ -22,8 +22,8 @@ The ***pivot*** is the point of partition, most commonly the first or middle ele
 
 Quicksort offers the following speed of sorting:
 
-- Number of comparisons: $n\log_2(n)$
-- Levels of partition: $\log_2(n)$
+- Number of comparisons: $$n\log_2(n)$$
+- Levels of partition: $$\log_2(n)$$
 
 ## Stack Overflow
 A program exhibits ***conditional compilation*** as a method of debugging outputs.

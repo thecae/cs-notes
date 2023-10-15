@@ -1,7 +1,7 @@
 # String Basics
 A ***string*** is a sequence of characters, like the text `JOHN`, that can be stored in a variable.  A ***string literal*** is a string value specified in the source code of a program.  A programmer creates a string literal by surrounding text with single or double quotes, such as 'JOHN' or "JOHN".
 
-The string type is a special construct known as a ***sequence type***, a type that specifies a collection of objects ordered from left to right.  A string's characters are ordered from the string's first letter to the last.  A character's position in a string is called the character's index, which starts at $0$.  In "JOHN", $J$ is at $0$, $O$ is at $1$, etc.
+The string type is a special construct known as a ***sequence type***, a type that specifies a collection of objects ordered from left to right.  A string's characters are ordered from the string's first letter to the last.  A character's position in a string is called the character's index, which starts at $$0$$.  In "JOHN", $$J$$ is at $$0$$, $$O$$ is at $$1$$, etc.
 
 A programmer can assign a string just as with other types. Ex: `str1 = 'Hello'`, or `str1 = str2`. The `input()` function can also be used to get strings from the user.  An empty string is a sequence type with 0 elements, created with two quotes. Ex: `my_str = ''`.
 
@@ -10,7 +10,7 @@ A common operation is to find the length, or the number of characters, in a stri
 name = 'John Smith'
 print(len(name))
 ```
-The output of the above code is $10$.
+The output of the above code is $$10$$.
 
 Programs commonly access an individual character of a string.  A programmer can access a character at a specific index by appending ***brackets*** (`[]`) containing the index.
 ```python
@@ -31,9 +31,9 @@ strings = string_1 + string_2 # strings = "abc123"
 ```
 
 ## Representing Text
-Python uses ***Unicode*** to represent every possible character as a unique number, known as a ***code point***.  For example, the character $G$ has a code point decimal value of $71$.  In total, there are more than $1,000,000$ code points in the Unicode standard character set.
+Python uses ***Unicode*** to represent every possible character as a unique number, known as a ***code point***.  For example, the character $$G$$ has a code point decimal value of $$71$$.  In total, there are more than $$1,000,000$$ code points in the Unicode standard character set.
 
-In addition to visible characters like $\$$ or $5$, several special characters called ***escape sequences*** exist.  An escape sequence is a two-item sequence that denotes specialized formatting.  The first part of the escape sequence is a $\\$, or a backslash, that denotes the character is an escape sequence.  The character of that is the definition of the sequence.
+In addition to visible characters like $$\$$$$ or $$5$$, several special characters called ***escape sequences*** exist.  An escape sequence is a two-item sequence that denotes specialized formatting.  The first part of the escape sequence is a $$\\$$, or a backslash, that denotes the character is an escape sequence.  The character of that is the definition of the sequence.
 
 | Escape Sequence | Explanation | Example Code | Output |
 |-----------------|-------------|--------------|--------|
@@ -67,9 +67,9 @@ The string `format()` function allows a programmer to create a string with place
 number = 6
 amount = 32
 
-print('{} burritos cost ${}'.format(number, amount))
+print('{} burritos cost $${}'.format(number, amount))
 ```
-The output of the above code is `6 burritos cost $32`.
+The output of the above code is `6 burritos cost $$32`.
 
 The three ways to provide values to replacement fields include:
 
@@ -84,7 +84,7 @@ Named replacement allows a programmer to create a ***keyword argument*** that de
 
 Double braces `{{}}` can be used to place an actual curly brace into a string.  For example, `'{0} {{Bezos}}'.format('Amazon')` produces the string `Amazon {Bezos}`.
 
-A ***format specification*** inside of a replacement field allows a value's formatting in the string to be customized.  A common format specification is to provide a ***presentation type*** for the value, such as integer ($4$), floating point ($4.0$), fixed precision decimal ($4.000$), percentage ($4\%$), binary ($100_2$), etc.
+A ***format specification*** inside of a replacement field allows a value's formatting in the string to be customized.  A common format specification is to provide a ***presentation type*** for the value, such as integer ($$4$$), floating point ($$4.0$$), fixed precision decimal ($$4.000$$), percentage ($$4\%$$), binary ($$100_2$$), etc.
 
 | Type | Description | Example | Output |
 |------|-------------|---------|--------|
@@ -99,13 +99,13 @@ A ***format specification*** inside of a replacement field allows a value's form
 The colon `:` in the replacement field separates the "what" on the left side from the "how" on the right.  The left side can be omitted (inferred), a number (positional), or a name (named).
 
 ## General If-Else Branches
-A ***branch*** is a program path taken only if an expression's value is true.  For example, a hotel may discount a price only for people over age $60$.  Such a branch is commonly known as an ***if-branch***: a branch taken only if an expression evaluates to `true`.
+A ***branch*** is a program path taken only if an expression's value is true.  For example, a hotel may discount a price only for people over age $$60$$.  Such a branch is commonly known as an ***if-branch***: a branch taken only if an expression evaluates to `true`.
 
 An ***if-else*** structure has two branches: the first branch is taken if an expression is true, else the other branch is taken.
 
 Commonly a programmer wishes to take one of multiple (three or more) branches.  An if-else can be extended to an ***if-elseif-else*** structure.  Each branch's expression is checked in sequence; as soon as one branch's expression is found to be true, that branch is taken.  If no expression is found true, execution will reach the else branch, which then executes.
 
-An ***if*** statement executes a group of statements if an expression is true.  The statements in a branch must be indented some number of spaces, typically four ($4$).
+An ***if*** statement executes a group of statements if an expression is true.  The statements in a branch must be indented some number of spaces, typically four ($$4$$).
 ```python
 hotel_rate = 155
 user_age = int(input('Enter age: '))

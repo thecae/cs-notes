@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 `SELECT` is undoubtedly the most frequently used SQL statement.  But there are three other frequently used SQL statements to learn.  The first is `INSERT`.

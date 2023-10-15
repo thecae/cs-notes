@@ -5,7 +5,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$$set(echo = TRUE)
 ```
 
 ## Understanding Constraints
@@ -107,13 +107,13 @@ The syntax for unique constraints is similar to that for other constraints. Eith
 ## Check Constraints
 Check constraints are used to ensure that data in a column (or set of columns) meets a set of criteria that you specify. Common uses of this are:
 
-- *Checking minimum or maximum values*: For example, preventing an order of $0$ items (even though $0$ is a valid number)
+- *Checking minimum or maximum values*: For example, preventing an order of $$0$$ items (even though $$0$$ is a valid number)
 - *Specifying ranges*: For example, making sure that a ship date is greater than or equal to today’s date and not greater than a year from now
 - Allowing only specific values—For example, allowing only `M` or `F` in a gender field
 
 In other words, datatypes restrict the type of data that can be stored in a column. Check constraints place further restrictions within that datatype, and these can be invaluable in ensuring that the data that gets inserted into your database is exactly what you want. Rather than relying on client applications or users to get it right, the DBMS itself will reject anything that is invalid.
 
-The following example applies a check constraint to the *OrderItems* table to ensure that all items have a quantity greater than $0$:
+The following example applies a check constraint to the *OrderItems* table to ensure that all items have a quantity greater than $$0$$:
 ```sql
 CREATE TABLE OrderItems (
   order_num     INTEGER     NOT NULL,
@@ -124,7 +124,7 @@ CREATE TABLE OrderItems (
 );
 ```
 
-With this constraint in place, any row inserted (or updated) will be checked to ensure that quantity is greater than $0$.
+With this constraint in place, any row inserted (or updated) will be checked to ensure that quantity is greater than $$0$$.
 
 To check that a column named gender contains only `M` or `F`, you can do the following in an `ALTER TABLE` statement:
 ```sql
