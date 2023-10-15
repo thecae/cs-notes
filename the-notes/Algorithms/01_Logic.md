@@ -6,7 +6,7 @@ A _**proposition**_ is the most basic element in logic and is a statement that i
 
 | Proposition            | Truth Value       |
 | ---------------------- | ----------------- |
-| 2+2=4                  | True              |
+| $$2+2=4$$                  | True              |
 | $2+2=5$                | False             |
 | Monday will be cloudy. | Unknown           |
 | The movie was good.    | Matter of opinion |
